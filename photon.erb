@@ -45,22 +45,34 @@
     #
     # The colors below are the first 16 colors of the xterm palette. They
     # are only here as an example so you can get rid of them, I won't be mad.
-    black       = ["#000000", 0, "black"]
-    darkred     = ["#800000", 1, "darkred"]
-    darkgreen   = ["#008000", 2, "darkgreen"]
-    darkyellow  = ["#808000", 3, "darkyellow"]
-    darkblue    = ["#000080", 4, "darkblue"]
-    darkmagenta = ["#800080", 5, "darkmagenta"]
-    darkcyan    = ["#008080", 6, "darkcyan"]
-    gray        = ["#c0c0c0", 7, "gray"]
-    darkgray    = ["#808080", 8, "darkgray"]
-    red         = ["#ff0000", 9, "red"]
-    green       = ["#00ff00", 10, "green"]
-    yellow      = ["#ffff00", 11, "yellow"]
-    blue        = ["#0000ff", 12, "blue"]
-    magenta     = ["#ff00ff", 13, "magenta"]
-    cyan        = ["#00ffff", 14, "cyan"]
-    white       = ["#ffffff", 15, "white"]
+
+    # Background
+    bg = ["#262626", 235, "black"]
+
+    # Darker background shades
+    bgd_1 = ["#1c1c1c", 234, "black"]
+    bgd_2 = ["#121212", 233, "black"]
+
+    # Lighter background shades
+    bgl_1 = ["#303030", 236, "darkgray"]
+    bgl_2 = ["#3a3a3a", 237, "darkgray"]
+    bgl_3 = ["#544a65", 238, "darkgray"]
+    bgl_4 = ["#606060", 241, "darkgray"]
+
+    # Foreground
+    fg = ["#c6c6c6", 251, "white"]
+
+    # Accents
+    purple = ["#b888e2", 140, "darkmagenta"]
+    orange = ["#d75f5f", 167, "red"]
+    green = ["#5fd7a7", 10, "green"]
+    blue = ["#20bbfc", 12, "blue"]
+    grey = ["#767676", 243, "darkgray"]
+    teal = ["#0cb7a3", 30, "darkcyan"]
+
+    # TODO remove these
+    darkgray = ["#808080", 8, "darkgray"]
+    white = ["#ffffff", 15, "white"]
 
     # Step 3: highlights
     #
@@ -96,67 +108,113 @@
     # You can add any custom highlight group to the standard list below but you shouldn't
     # remove any if you want a working colorscheme.
     highlights = [
-        [ "Normal", white, darkgray, "NONE" ],
-        [ "NonText", white, darkgray, "NONE" ],
-        [ "Comment", white, darkgray, "NONE" ],
-        [ "Constant", white, darkgray, "NONE" ],
-        [ "Error", white, darkgray, "NONE" ],
-        [ "Identifier", white, darkgray, "NONE" ],
-        [ "Ignore", white, darkgray, "NONE" ],
-        [ "PreProc", white, darkgray, "NONE" ],
-        [ "Special", white, darkgray, "NONE" ],
-        [ "Statement", white, darkgray, "NONE" ],
-        [ "String", white, darkgray, "NONE" ],
-        [ "Number", white, darkgray, "NONE" ],
-        [ "Todo", white, darkgray, "NONE" ],
-        [ "Type", white, darkgray, "NONE" ],
-        [ "Underlined", white, darkgray, "NONE" ],
-        [ "StatusLine", white, darkgray, "NONE" ],
-        [ "StatusLineNC", white, darkgray, "NONE" ],
-        [ "VertSplit", white, darkgray, "NONE" ],
-        [ "TabLine", white, darkgray, "NONE" ],
-        [ "TabLineFill", white, darkgray, "NONE" ],
-        [ "TabLineSel", white, darkgray, "NONE" ],
-        [ "Title", white, darkgray, "NONE" ],
-        [ "CursorLine", white, darkgray, "NONE" ],
-        [ "LineNr", white, darkgray, "NONE" ],
-        [ "CursorLineNr", white, darkgray, "NONE" ],
+        [ "Normal", bg, fg, "NONE" ],
+        [ "NonText", "NONE", bgl_2, "NONE" ],
+        [ "Comment", "NONE", bgl_4, "NONE" ],
+
+        [ "Constant", "NONE", purple, "NONE" ],
+        [ "Character", "Constant" ],
+        [ "Number", "Constant" ],
+        [ "Float", "Number" ],
+        [ "Boolean", "Constant" ],
+        [ "String", "Constant" ],
+
+        [ "Identifier", bg, fg, "NONE" ],
+        [ "Function", "Identifier" ],
+
+        [ "Statement", "NONE", grey, "NONE" ],
+        [ "Conditonal", "Statement" ],
+        [ "Repeat", "Statement" ],
+        [ "Label", "Statement" ],
+        [ "Keyword", "Statement" ],
+        [ "Exception", "Statement" ],
+
+        [ "Operator", "NONE", fg, "bold" ],
+
+        [ "PreProc", "NONE", grey, "NONE" ],
+        [ "Include", "PreProc" ],
+        [ "Define", "PreProc" ],
+        [ "Macro", "PreProc" ],
+        [ "PreCondit", "PreProc" ],
+
+        [ "Type", "NONE", fg, "NONE" ],
+        [ "StorageClass", "Type" ],
+        [ "Structure", "Type" ],
+        [ "Typedef", "Type" ],
+
+        [ "Special", "NONE", grey, "NONE" ],
+        [ "SpecialChar", "Special" ],
+        [ "Tag", "Special" ],
+        [ "Delimiter", "Special" ],
+        [ "SpecialComment", "Special" ],
+        [ "Debug", "Special" ],
+
+        [ "Error", white, darkgray, "NONE" ], # TODO red/orange
+        [ "ErrorMsg", "Error" ],
+        [ "Warning", white, darkgray, "NONE" ], # TODO yellow/orange
+        [ "WarningMsg", "Warning" ],
+        [ "ModeMsg", "NONE", grey, "bold" ],
+        [ "MoreMsg", "ModeMsg" ],
+        [ "Question", "NONE", teal, "NONE" ],
+
+        [ "Ignore", "NONE", "NONE", "NONE" ],
+        [ "Todo", "NONE", orange, "bold" ],
+        [ "Underlined", "NONE", fg, "underline" ],
+
+        [ "StatusLine", bgl_2, purple, "NONE" ],
+        [ "StatusLineNC", bgl_1, bgl_4, "NONE" ],
+        [ "StatusLineTerm", "StatusLine" ],
+        [ "StatusLineTermNC", "StatusLineNC" ],
+        [ "VertSplit", bgl_1, bgl_1, "NONE" ],
+        [ "TabLine", bgl_1, "NONE", "NONE" ],
+        [ "TabLineFill", bgl_1, "NONE", "NONE" ],
+        [ "TabLineSel", bgl_2, purple, "NONE" ],
+        [ "WildMenu", bgl_1, orange, "NONE" ],
+
+        [ "Title", "NONE", blue, "NONE" ],
+
+        [ "LineNr", "NONE", bgl_4, "NONE" ],
+        [ "CursorLineNr", bgl_1, purple, "NONE" ],
+        [ "Cursor", purple, fg, "NONE" ],
+        [ "CursorLine", bgl_1, "NONE", "NONE" ],
+        [ "CursorColumn", "CursorLine" ],
+        [ "ColorColumn", bgd_1, "NONE", "NONE" ],
+        [ "SignColumn", "NONE", green, "NONE" ],
+
         [ "helpLeadBlank", white, darkgray, "NONE" ],
         [ "helpNormal", white, darkgray, "NONE" ],
-        [ "Visual", white, darkgray, "NONE" ],
-        [ "VisualNOS", white, darkgray, "NONE" ],
-        [ "Pmenu", white, darkgray, "NONE" ],
-        [ "PmenuSbar", white, darkgray, "NONE" ],
-        [ "PmenuSel", white, darkgray, "NONE" ],
-        [ "PmenuThumb", white, darkgray, "NONE" ],
-        [ "FoldColumn", white, darkgray, "NONE" ],
-        [ "Folded", white, darkgray, "NONE" ],
-        [ "WildMenu", white, darkgray, "NONE" ],
-        [ "SpecialKey", white, darkgray, "NONE" ],
-        [ "DiffAdd", white, darkgray, "NONE" ],
-        [ "DiffChange", white, darkgray, "NONE" ],
-        [ "DiffDelete", white, darkgray, "NONE" ],
-        [ "DiffText", white, darkgray, "NONE" ],
-        [ "IncSearch", white, darkgray, "NONE" ],
-        [ "Search", white, darkgray, "NONE" ],
-        [ "Directory", white, darkgray, "NONE" ],
-        [ "MatchParen", white, darkgray, "NONE" ],
-        [ "SpellBad", white, darkgray, "NONE", red ],
-        [ "SpellCap", white, darkgray, "NONE", blue ],
-        [ "SpellLocal", white, darkgray, "NONE", magenta ],
-        [ "SpellRare", white, darkgray, "NONE", cyan ],
-        [ "ColorColumn", white, darkgray, "NONE" ],
-        [ "SignColumn", white, darkgray, "NONE" ],
-        [ "ErrorMsg", white, darkgray, "NONE" ],
-        [ "ModeMsg", white, darkgray, "NONE" ],
-        [ "MoreMsg", white, darkgray, "NONE" ],
-        [ "Question", white, darkgray, "NONE" ],
-        [ "WarningMsg", white, darkgray, "NONE" ],
-        [ "Cursor", white, darkgray, "NONE" ],
-        [ "CursorColumn", white, darkgray, "NONE" ],
-        [ "QuickFixLine", white, darkgray, "NONE" ],
-        [ "StatusLineTerm", white, darkgray, "NONE" ],
-        [ "StatusLineTermNC", white, darkgray, "NONE" ]
+
+        [ "Visual", bgl_3, "NONE", "NONE" ],
+        [ "VisualNOS", bgl_4, "NONE", "NONE" ],
+
+        [ "Pmenu", bgl_2, "NONE", "NONE" ],
+        [ "PmenuSbar", bgl_1, "NONE", "NONE" ],
+        [ "PmenuSel", bgl_1, purple, "NONE" ],
+        [ "PmenuThumb", orange, "NONE", "NONE" ],
+
+        [ "FoldColumn", "NONE", bgl_4, "NONE" ],
+        [ "Folded", bgd_1, grey, "NONE" ],
+
+        [ "SpecialKey", "NONE", green, "NONE" ],
+        [ "IncSearch", blue, fg, "NONE" ], # FIXME use better colours
+        [ "Search", teal, fg, "NONE" ], # FIXME use better colours
+        [ "Directory", "NONE", blue, "NONE" ],
+        [ "MatchParen", "NONE", green, "bold" ],
+
+        [ "SpellBad", "NONE", orange, "underline" ], # TODO
+        [ "SpellCap", "NONE", green, "underline" ],
+        [ "SpellLocal", "NONE", blue, "underline" ],
+        [ "SpellRare", "NONE", teal, "underline" ],
+
+        [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
+
+        # FIXME
+        [ "DiffAdd", "NONE", green, "NONE" ],
+        [ "DiffChange", "NONE", darkgray, "NONE" ],
+        [ "DiffDelete", "NONE", orange, "NONE" ],
+        [ "DiffText", "NONE", blue, "NONE" ],
+        [ "diffAdded", "DiffAdd" ],
+        [ "diffRemoved", "DiffDelete" ]
     ]
 
     # Step 4: generation
@@ -168,59 +226,6 @@
     # From Vim:
     #
     #     :!erb -T - % > %:r.vim
-
-    # These online resources can help you design your colorscheme:
-    #
-    #   * http://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
-    #         the xterm palette
-    #   * http://whatcolor.herokuapp.com/
-    #         play with hexadecimal colors right in the address bar (currently down)
-    #   * http://color.hailpixel.com/
-    #         similar concept, fuzzier implementation
-    #   * http://colourco.de/
-    #         similar concept, fancier implementation
-    #   * http://www.colr.org/
-    #         extract a palette from an image
-    #   * http://colores.manugarri.com/
-    #         search for 'word', get images and color palettes
-    #   * http://www.colourlovers.com/palettes
-    #         user-created palettes
-    #   * http://www.perbang.dk/color+scheme/
-    #         a no-nonsense colorscheme generator
-    #   * https://color.adobe.com/
-    #         Adobe's fancy colorscheme generator
-    #   * http://paletton.com/
-    #         The classic 'Color Scheme Designer', rebranded
-    #   * http://vrl.cs.brown.edu/color
-    #         A very smart palette generator
-    #   * https://cmcenroe.me/2018/04/03/colour-scheme.html
-    #         "I Made My Own Colour Scheme and You Can Too!"
-
-    # A few general advices:
-    #
-    #   * The Windows console is limited to the 16 so-called "ANSI" colors but it has
-    #     a few of them interverted which makes numbers impractical. Use color names
-    #     instead of numbers: :help cterm-colors
-    #   * The Windows console (yeah…) doesn't do italics, underlines or bolded text;
-    #     it is limited to normal and reverse. Keep that in mind if you want
-    #     your colorscheme to be usable in as many environments as possible by as many
-    #     people as possible.
-    #   * All of the terminal emulators in use these days allow their users to
-    #     change the 16 so-called "ANSI" colors. It is also possible on some platforms
-    #     to change some or all of the 256 colors in the xterm palette. Don't take
-    #     anything for granted.
-    #   * When used against a light background, strong colors work better than muted
-    #     ones. Light or dark doesn't really matters. Also, it is harder to discriminate
-    #     between two similar colors on a light background.
-    #   * Both strong and muted colors work well against a dark background. It is also
-    #     easier to work with similar colors, but dark colors don't work at all.
-    #   * Use as many text samples as possible. String-heavy languages may look completely
-    #     different than keyword-heavy ones. This can have an impact on the usability
-    #     of your colorscheme.
-    #   * Most terminal emulators and terminal multiplexers currently in use on unix-like
-    #     systems support 256 colors but they almost always default to a '$TERM' that tells
-    #     Vim otherwise. Your users will need to make sure their terminal emulator/multiplexer
-    #     is correctly set up if they want to enjoy the best possible experience.
 
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
 
