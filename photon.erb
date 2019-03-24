@@ -46,9 +46,6 @@
     # The colors below are the first 16 colors of the xterm palette. They
     # are only here as an example so you can get rid of them, I won't be mad.
 
-    # TODO ensure that 24-bit colors are the same as their 16-bit counter-parts
-    # TODO improve the 4-bit colors
-
     # Background
     bg = ["#262626", 235, "black"]
 
@@ -59,23 +56,22 @@
     # Lighter background shades
     bgl_1 = ["#303030", 236, "darkgray"]
     bgl_2 = ["#3a3a3a", 237, "darkgray"]
-    bgl_3 = ["#544a65", 238, "darkgray"]
-    bgl_4 = ["#606060", 241, "darkgray"]
+    bgl_3 = ["#444444", 238, "darkgray"]
+    bgl_4 = ["#626262", 241, "darkgray"]
 
     # Foreground
     fg = ["#c6c6c6", 251, "white"]
 
     # Accents
-    purple = ["#b888e2", 140, "darkmagenta"]
+    purple = ["#af87d7", 140, "darkmagenta"]
     orange = ["#d75f5f", 167, "red"]
-    green = ["#5fd7a7", 10, "green"]
-    blue = ["#20bbfc", 12, "blue"] # TODO improve this color
+    yellow = ["#af8700", 136, "darkyellow"]
+    green = ["#5fd7a7", 10, "green"] # FIXME try nad merge the 2 greens together and fix the hex code for this
+    green2 = ["#87af87", 108, "darkgreen"]
+    blue = ["#5f87ff", 68, "blue"] # TODO improve this colour
     grey = ["#767676", 243, "darkgray"]
-    teal = ["#0cb7a3", 30, "darkcyan"] # TODO improve or remove this color
-
-    # TODO remove these
-    darkgray = ["#808080", 8, "darkgray"]
-    white = ["#ffffff", 15, "white"]
+    teal = ["#00afd7", 38, "darkcyan"]
+    red = ["#af5f87", 132, "darkred"] # TODO make brighter?
 
     # Step 3: highlights
     #
@@ -152,13 +148,13 @@
         [ "SpecialComment", "Special" ],
         [ "Debug", "Special" ],
 
-        [ "Error", white, darkgray, "NONE" ], # TODO red/orange
-        [ "ErrorMsg", "Error" ],
-        [ "Warning", white, darkgray, "NONE" ], # TODO yellow/orange
-        [ "WarningMsg", "Warning" ],
+        [ "Error", "NONE", red, "NONE" ],
+        [ "ErrorMsg", "NONE", red, "NONE" ],
+        [ "Warning", "NONE", yellow, "NONE" ],
+        [ "WarningMsg", "NONE", yellow, "NONE" ],
         [ "ModeMsg", "NONE", grey, "bold" ],
-        [ "MoreMsg", "ModeMsg" ],
-        [ "Question", "NONE", teal, "NONE" ],
+        [ "MoreMsg", "NONE", grey, "bold" ],
+        [ "Question", "NONE", green2, "NONE" ],
 
         [ "Ignore", "NONE", "NONE", "NONE" ],
         [ "Todo", "NONE", orange, "bold" ],
@@ -174,7 +170,7 @@
         [ "TabLineSel", bgl_2, purple, "NONE" ],
         [ "WildMenu", bgl_1, orange, "NONE" ],
 
-        [ "Title", "NONE", blue, "NONE" ], # TODO improve this?
+        [ "Title", "NONE", blue, "NONE" ],
 
         [ "LineNr", "NONE", bgl_4, "NONE" ],
         [ "CursorLineNr", bgl_1, purple, "NONE" ],
@@ -198,25 +194,23 @@
         [ "Folded", bgd_1, grey, "NONE" ],
 
         [ "SpecialKey", "NONE", grey, "NONE" ],
-        [ "IncSearch", blue, fg, "NONE" ], # FIXME use better colours
-        [ "Search", teal, fg, "NONE" ], # FIXME use better colours
+        [ "IncSearch", orange, bg, "NONE" ],
+        [ "Search", teal, bg, "NONE" ],
         [ "Directory", "NONE", blue, "NONE" ],
         [ "MatchParen", "NONE", green, "bold" ],
 
-        # FIXME
-        [ "SpellBad", "NONE", orange, "underline" ],
-        [ "SpellCap", "NONE", green, "underline" ],
+        [ "SpellBad", "NONE", red, "underline" ],
+        [ "SpellCap", "NONE", green2, "underline" ],
         [ "SpellLocal", "NONE", blue, "underline" ],
-        [ "SpellRare", "NONE", teal, "underline" ],
+        [ "SpellRare", "NONE", yellow, "underline" ],
 
-        # TODO colour "warning" and "error" in quickfix list
         [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
 
-        # FIXME
-        [ "DiffAdd", "NONE", green, "NONE" ],
-        [ "DiffChange", "NONE", darkgray, "NONE" ],
-        [ "DiffDelete", "NONE", orange, "NONE" ],
-        [ "DiffText", "NONE", blue, "NONE" ],
+        # TODO improve the colours used here
+        [ "DiffAdd", "NONE", green2, "NONE" ],
+        [ "DiffChange", "NONE", yellow, "NONE" ],
+        [ "DiffDelete", "NONE", red, "NONE" ],
+        [ "DiffText", "NONE", orange, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ]
 
