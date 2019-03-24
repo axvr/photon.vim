@@ -24,7 +24,7 @@
         author:      "Alex Vear",
         email:       "av@axvr.io",
         name:        "photon",
-        description: "Lorem ipsum dolor sit amet.",
+        description: "A minimal and elegant dark colour scheme for Vim.",
         background:  "dark",
         webpage:     "https://github.com/axvr/photon.vim",
         licence:     "MIT Licence"
@@ -46,6 +46,9 @@
     # The colors below are the first 16 colors of the xterm palette. They
     # are only here as an example so you can get rid of them, I won't be mad.
 
+    # TODO ensure that 24-bit colors are the same as their 16-bit counter-parts
+    # TODO improve the 4-bit colors
+
     # Background
     bg = ["#262626", 235, "black"]
 
@@ -66,9 +69,9 @@
     purple = ["#b888e2", 140, "darkmagenta"]
     orange = ["#d75f5f", 167, "red"]
     green = ["#5fd7a7", 10, "green"]
-    blue = ["#20bbfc", 12, "blue"]
+    blue = ["#20bbfc", 12, "blue"] # TODO improve this color
     grey = ["#767676", 243, "darkgray"]
-    teal = ["#0cb7a3", 30, "darkcyan"]
+    teal = ["#0cb7a3", 30, "darkcyan"] # TODO improve or remove this color
 
     # TODO remove these
     darkgray = ["#808080", 8, "darkgray"]
@@ -162,16 +165,16 @@
         [ "Underlined", "NONE", fg, "underline" ],
 
         [ "StatusLine", bgl_2, purple, "NONE" ],
-        [ "StatusLineNC", bgl_1, bgl_4, "NONE" ],
+        [ "StatusLineNC", bgl_1, grey, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
         [ "VertSplit", bgl_1, bgl_1, "NONE" ],
-        [ "TabLine", bgl_1, "NONE", "NONE" ],
-        [ "TabLineFill", bgl_1, "NONE", "NONE" ],
+        [ "TabLine", bgl_1, grey, "NONE" ],
+        [ "TabLineFill", bgl_1, grey, "NONE" ],
         [ "TabLineSel", bgl_2, purple, "NONE" ],
         [ "WildMenu", bgl_1, orange, "NONE" ],
 
-        [ "Title", "NONE", blue, "NONE" ],
+        [ "Title", "NONE", blue, "NONE" ], # TODO improve this?
 
         [ "LineNr", "NONE", bgl_4, "NONE" ],
         [ "CursorLineNr", bgl_1, purple, "NONE" ],
@@ -181,8 +184,7 @@
         [ "ColorColumn", bgd_1, "NONE", "NONE" ],
         [ "SignColumn", "NONE", green, "NONE" ],
 
-        [ "helpLeadBlank", white, darkgray, "NONE" ],
-        [ "helpNormal", white, darkgray, "NONE" ],
+        # TODO vim help docs (especially links)
 
         [ "Visual", bgl_3, "NONE", "NONE" ],
         [ "VisualNOS", bgl_4, "NONE", "NONE" ],
@@ -195,17 +197,19 @@
         [ "FoldColumn", "NONE", bgl_4, "NONE" ],
         [ "Folded", bgd_1, grey, "NONE" ],
 
-        [ "SpecialKey", "NONE", green, "NONE" ],
+        [ "SpecialKey", "NONE", grey, "NONE" ],
         [ "IncSearch", blue, fg, "NONE" ], # FIXME use better colours
         [ "Search", teal, fg, "NONE" ], # FIXME use better colours
         [ "Directory", "NONE", blue, "NONE" ],
         [ "MatchParen", "NONE", green, "bold" ],
 
-        [ "SpellBad", "NONE", orange, "underline" ], # TODO
+        # FIXME
+        [ "SpellBad", "NONE", orange, "underline" ],
         [ "SpellCap", "NONE", green, "underline" ],
         [ "SpellLocal", "NONE", blue, "underline" ],
         [ "SpellRare", "NONE", teal, "underline" ],
 
+        # TODO colour "warning" and "error" in quickfix list
         [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
 
         # FIXME
@@ -215,6 +219,8 @@
         [ "DiffText", "NONE", blue, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ]
+
+        # TODO improve colours for markdown, and org files
     ]
 
     # Step 4: generation
@@ -231,7 +237,7 @@
 
     # You don't need to edit anything beyond this line.
 -%>
-" <%= information[:name] %>.vim -- Vim color scheme.
+" Name:        <%= information[:name] %>.vim
 " Author:      <%= information[:author] %> <<%= information[:email] %>>
 " Webpage:     <%= information[:webpage] %>
 " Description: <%= information[:description] %>

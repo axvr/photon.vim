@@ -1,7 +1,6 @@
-all: build
-
 build:
 	erb -T - photon.erb > colors/photon.vim
 
-# install:
-# 	cp colors/* ~/Documents/Projects/dotfiles/vim/.vim/colors/
+install:
+	mkdir -p ~/.vim/colors/
+	cp colors/* ~/.vim/colors/

@@ -1,6 +1,6 @@
 # Photon.vim
 
-A minimal dark colorscheme for Vim.
+A minimal and elegant dark colour scheme for Vim.
 
 ![photon.vim](screenshots/photon1.png)
 
