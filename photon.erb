@@ -65,12 +65,12 @@
     # Accents
     purple = ["#af87d7", 140, "darkmagenta"]
     orange = ["#d75f5f", 167, "red"]
+    grey = ["#767676", 243, "darkgray"]
+
     yellow = ["#af8700", 136, "darkyellow"]
-    green = ["#5fd7a7", 10, "green"] # FIXME try nad merge the 2 greens together and fix the hex code for this
+    green = ["#5fd7a7", 10, "green"] # FIXME try and merge the 2 greens together and fix the hex code for this
     green2 = ["#87af87", 108, "darkgreen"]
     blue = ["#5f87ff", 68, "blue"] # TODO improve this colour
-    grey = ["#767676", 243, "darkgray"]
-    teal = ["#00afd7", 38, "darkcyan"]
     red = ["#af5f87", 132, "darkred"] # TODO make brighter?
 
     # Step 3: highlights
@@ -152,9 +152,9 @@
         [ "ErrorMsg", "NONE", red, "NONE" ],
         [ "Warning", "NONE", yellow, "NONE" ],
         [ "WarningMsg", "NONE", yellow, "NONE" ],
-        [ "ModeMsg", "NONE", grey, "bold" ],
-        [ "MoreMsg", "NONE", grey, "bold" ],
-        [ "Question", "NONE", green2, "NONE" ],
+        [ "ModeMsg", "NONE", grey, "NONE" ],
+        [ "MoreMsg", "NONE", grey, "NONE" ],
+        [ "Question", "NONE", grey, "NONE" ],
 
         [ "Ignore", "NONE", "NONE", "NONE" ],
         [ "Todo", "NONE", orange, "bold" ],
@@ -170,7 +170,7 @@
         [ "TabLineSel", bgl_2, purple, "NONE" ],
         [ "WildMenu", bgl_1, orange, "NONE" ],
 
-        [ "Title", "NONE", blue, "NONE" ],
+        [ "Title", "NONE", grey, "bold" ],
 
         [ "LineNr", "NONE", bgl_4, "NONE" ],
         [ "CursorLineNr", bgl_1, purple, "NONE" ],
@@ -182,8 +182,8 @@
 
         # TODO vim help docs (especially links)
 
-        [ "Visual", bgl_3, "NONE", "NONE" ],
-        [ "VisualNOS", bgl_4, "NONE", "NONE" ],
+        [ "Visual", bgl_2, "NONE", "NONE" ],
+        [ "VisualNOS", bgl_3, "NONE", "NONE" ],
 
         [ "Pmenu", bgl_2, "NONE", "NONE" ],
         [ "PmenuSbar", bgl_1, "NONE", "NONE" ],
@@ -195,8 +195,8 @@
 
         [ "SpecialKey", "NONE", grey, "NONE" ],
         [ "IncSearch", orange, bg, "NONE" ],
-        [ "Search", teal, bg, "NONE" ],
-        [ "Directory", "NONE", blue, "NONE" ],
+        [ "Search", purple, bg, "NONE" ],
+        [ "Directory", "NONE", purple, "NONE" ],
         [ "MatchParen", "NONE", green, "bold" ],
 
         [ "SpellBad", "NONE", red, "underline" ],
