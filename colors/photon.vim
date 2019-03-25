@@ -73,7 +73,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi CursorLine ctermbg=236 ctermfg=NONE cterm=NONE guibg=#303030 guifg=NONE gui=NONE
     hi link CursorColumn CursorLine
     hi ColorColumn ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1c1c1c guifg=NONE gui=NONE
-    hi SignColumn ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#5fd7a7 gui=NONE
+    hi SignColumn ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
     hi Visual ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
     hi VisualNOS ctermbg=238 ctermfg=NONE cterm=NONE guibg=#444444 guifg=NONE gui=NONE
     hi Pmenu ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
@@ -86,7 +86,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi IncSearch ctermbg=167 ctermfg=235 cterm=NONE guibg=#d75f5f guifg=#262626 gui=NONE
     hi Search ctermbg=140 ctermfg=235 cterm=NONE guibg=#af87d7 guifg=#262626 gui=NONE
     hi Directory ctermbg=NONE ctermfg=140 cterm=NONE guibg=NONE guifg=#af87d7 gui=NONE
-    hi MatchParen ctermbg=NONE ctermfg=10 cterm=bold guibg=NONE guifg=#5fd7a7 gui=bold
+    hi MatchParen ctermbg=NONE ctermfg=167 cterm=bold guibg=NONE guifg=#d75f5f gui=bold
     hi SpellBad ctermbg=NONE ctermfg=132 cterm=underline guibg=NONE guifg=#af5f87 gui=underline
     hi SpellCap ctermbg=NONE ctermfg=108 cterm=underline guibg=NONE guifg=#87af87 gui=underline
     hi SpellLocal ctermbg=NONE ctermfg=68 cterm=underline guibg=NONE guifg=#5f87ff gui=underline
@@ -160,7 +160,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi CursorLine ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi link CursorColumn CursorLine
     hi ColorColumn ctermbg=black ctermfg=NONE cterm=NONE
-    hi SignColumn ctermbg=NONE ctermfg=green cterm=NONE
+    hi SignColumn ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi Visual ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
@@ -173,7 +173,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi IncSearch ctermbg=red ctermfg=black cterm=NONE
     hi Search ctermbg=darkmagenta ctermfg=black cterm=NONE
     hi Directory ctermbg=NONE ctermfg=darkmagenta cterm=NONE
-    hi MatchParen ctermbg=NONE ctermfg=green cterm=bold
+    hi MatchParen ctermbg=NONE ctermfg=red cterm=bold
     hi SpellBad ctermbg=NONE ctermfg=darkred cterm=underline
     hi SpellCap ctermbg=NONE ctermfg=darkgreen cterm=underline
     hi SpellLocal ctermbg=NONE ctermfg=blue cterm=underline

@@ -3,10 +3,7 @@
     # Author:        Romain Lafourcade (https://github.com/romainl)
     # Canonical URL: https://gist.github.com/romainl/5cd2f4ec222805f49eca
 
-    # This template is designed to help vimmers create their own colorschemes
-    # without much effort.
-    #
-    # You will need Ruby to generate your colorscheme but Ruby knowledge is
+    # You will need Ruby to generate this colorscheme but Ruby knowledge is
     # not needed at all.
     #
     # The process is divided in four steps:
@@ -42,9 +39,6 @@
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim, and any properly set up terminal emulator.
-    #
-    # The colors below are the first 16 colors of the xterm palette. They
-    # are only here as an example so you can get rid of them, I won't be mad.
 
     # Background
     bg = ["#262626", 235, "black"]
@@ -68,8 +62,7 @@
     grey = ["#767676", 243, "darkgray"]
 
     yellow = ["#af8700", 136, "darkyellow"]
-    green = ["#5fd7a7", 10, "green"] # FIXME try and merge the 2 greens together and fix the hex code for this
-    green2 = ["#87af87", 108, "darkgreen"]
+    green = ["#87af87", 108, "darkgreen"]
     blue = ["#5f87ff", 68, "blue"] # TODO improve this colour
     red = ["#af5f87", 132, "darkred"] # TODO make brighter?
 
@@ -103,9 +96,6 @@
     #
     # The sample above tells Vim to render badly spelled words in red against the current
     # background, with a red undercurl.
-    #
-    # You can add any custom highlight group to the standard list below but you shouldn't
-    # remove any if you want a working colorscheme.
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
         [ "NonText", "NONE", bgl_2, "NONE" ],
@@ -178,7 +168,7 @@
         [ "CursorLine", bgl_1, "NONE", "NONE" ],
         [ "CursorColumn", "CursorLine" ],
         [ "ColorColumn", bgd_1, "NONE", "NONE" ],
-        [ "SignColumn", "NONE", green, "NONE" ],
+        [ "SignColumn", "NONE", grey, "NONE" ],
 
         # TODO vim help docs (especially links)
 
@@ -197,17 +187,18 @@
         [ "IncSearch", orange, bg, "NONE" ],
         [ "Search", purple, bg, "NONE" ],
         [ "Directory", "NONE", purple, "NONE" ],
-        [ "MatchParen", "NONE", green, "bold" ],
+        [ "MatchParen", "NONE", orange, "bold" ],
 
+        # TODO improve the colours used here
         [ "SpellBad", "NONE", red, "underline" ],
-        [ "SpellCap", "NONE", green2, "underline" ],
+        [ "SpellCap", "NONE", green, "underline" ],
         [ "SpellLocal", "NONE", blue, "underline" ],
         [ "SpellRare", "NONE", yellow, "underline" ],
 
         [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
 
         # TODO improve the colours used here
-        [ "DiffAdd", "NONE", green2, "NONE" ],
+        [ "DiffAdd", "NONE", green, "NONE" ],
         [ "DiffChange", "NONE", yellow, "NONE" ],
         [ "DiffDelete", "NONE", red, "NONE" ],
         [ "DiffText", "NONE", orange, "NONE" ],
