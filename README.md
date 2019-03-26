@@ -2,7 +2,17 @@
 
 A minimal and elegant dark colour scheme for Vim.
 
-![photon.vim](screenshots/photon1.png)
+![photon.vim](https://github.com/axvr/photon.vim/raw/images/photon1.png)
+
+## Gallery
+
+![](https://github.com/axvr/photon.vim/raw/images/photon1.png)
+![](https://github.com/axvr/photon.vim/raw/images/photon2.png)
+![](https://github.com/axvr/photon.vim/raw/images/photon3.png)
+![](https://github.com/axvr/photon.vim/raw/images/photon4.png)
+
+_The source code shown in the above screenshots are from
+[txtdb](https://github.com/axvr/txtdb) and [irc.c](https://c9x.me/irc/)._
 
 ## Usage
 
