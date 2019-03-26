@@ -24,7 +24,7 @@
         description: "A minimal and elegant dark colour scheme for Vim.",
         background:  "dark",
         webpage:     "https://github.com/axvr/photon.vim",
-        licence:     "MIT Licence"
+        licence:     "MIT (2019)"
     }
 
     # Step 2: colors
@@ -108,7 +108,7 @@
         [ "Boolean", "Constant" ],
         [ "String", "Constant" ],
 
-        [ "Identifier", bg, fg, "NONE" ],
+        [ "Identifier", "NONE", fg, "NONE" ],
         [ "Function", "Identifier" ],
 
         [ "Statement", "NONE", grey, "NONE" ],
@@ -139,12 +139,13 @@
         [ "Debug", "Special" ],
 
         [ "Error", "NONE", red, "NONE" ],
-        [ "ErrorMsg", "NONE", red, "NONE" ],
+        [ "ErrorMsg", "Error" ],
         [ "Warning", "NONE", yellow, "NONE" ],
-        [ "WarningMsg", "NONE", yellow, "NONE" ],
+        [ "WarningMsg", "Warning" ],
+
         [ "ModeMsg", "NONE", grey, "NONE" ],
-        [ "MoreMsg", "NONE", grey, "NONE" ],
-        [ "Question", "NONE", grey, "NONE" ],
+        [ "MoreMsg", "ModeMsg" ],
+        [ "Question", "ModeMsg" ],
 
         [ "Ignore", "NONE", "NONE", "NONE" ],
         [ "Todo", "NONE", orange, "bold" ],
@@ -154,11 +155,11 @@
         [ "StatusLineNC", bgl_1, grey, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-        [ "VertSplit", bgl_1, bgl_1, "NONE" ],
-        [ "TabLine", bgl_1, grey, "NONE" ],
-        [ "TabLineFill", bgl_1, grey, "NONE" ],
-        [ "TabLineSel", bgl_2, purple, "NONE" ],
+        [ "TabLine", "StatusLineNC" ],
+        [ "TabLineFill", "StatusLineNC" ],
+        [ "TabLineSel", "StatusLine" ],
         [ "WildMenu", bgl_1, orange, "NONE" ],
+        [ "VertSplit", bgl_1, bgl_1, "NONE" ],
 
         [ "Title", "NONE", grey, "bold" ],
 
@@ -239,7 +240,7 @@ let colors_name = "<%= information[:name] %>"
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 <% for highlight in highlights -%>
 <% if highlight.length == 2 -%>
-    hi link <%= highlight[0] %> <%= highlight[1] %>
+    hi! link <%= highlight[0] %> <%= highlight[1] %>
 <% elsif highlight.length == 4 -%>
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %>
 <% if highlight[0] == "Normal" -%>
@@ -253,7 +254,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
 <% for highlight in highlights -%>
 <% if highlight.length == 2 -%>
-    hi link <%= highlight[0] %> <%= highlight[1] %>
+    hi! link <%= highlight[0] %> <%= highlight[1] %>
 <% else -%>
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][2] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][2] %> cterm=<%= highlight[3] %>
 <% if highlight[0] == "Normal" -%>
