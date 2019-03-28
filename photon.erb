@@ -3,20 +3,14 @@
     # Author:        Romain Lafourcade (https://github.com/romainl)
     # Canonical URL: https://gist.github.com/romainl/5cd2f4ec222805f49eca
 
-    # You will need Ruby to generate this colorscheme but Ruby knowledge is
-    # not needed at all.
-    #
-    # The process is divided in four steps:
-    #   1. start by editing your colorscheme's information,
-    #   2. define your colors,
-    #   3. define your highlight groups and links,
-    #   4. and generate your colorscheme.
+    # NOTE: Ruby is needed to generate this colorscheme.
 
     # Step 1: information
     #
     # Make sure the name of your colorscheme is unique and attractive.
     # The description should fit in a single line with no linefeed.
     # 'background' can be "light" or "dark".
+
     information = {
         author:      "Alex Vear",
         email:       "av@axvr.io",
@@ -96,37 +90,38 @@
     #
     # The sample above tells Vim to render badly spelled words in red against the current
     # background, with a red undercurl.
+
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
-        [ "NonText", "NONE", bgl_2, "NONE" ],
-        [ "Comment", "NONE", bgl_4, "NONE" ],
+        [ "NonText", bg, bgl_2, "NONE" ],
+        [ "Comment", bg, bgl_4, "NONE" ],
 
-        [ "Constant", "NONE", purple, "NONE" ],
+        [ "Constant", bg, purple, "NONE" ],
         [ "Character", "Constant" ],
         [ "Number", "Constant" ],
         [ "Float", "Number" ],
         [ "Boolean", "Constant" ],
         [ "String", "Constant" ],
 
-        [ "Identifier", "NONE", fg, "NONE" ],
+        [ "Identifier", bg, fg, "NONE" ],
         [ "Function", "Identifier" ],
 
-        [ "Statement", "NONE", grey, "NONE" ],
+        [ "Statement", bg, grey, "NONE" ],
         [ "Conditonal", "Statement" ],
         [ "Repeat", "Statement" ],
         [ "Label", "Statement" ],
         [ "Keyword", "Statement" ],
         [ "Exception", "Statement" ],
 
-        [ "Operator", "NONE", fg, "bold" ],
+        [ "Operator", bg, fg, "bold" ],
 
-        [ "PreProc", "NONE", grey, "NONE" ],
+        [ "PreProc", bg, grey, "NONE" ],
         [ "Include", "PreProc" ],
         [ "Define", "PreProc" ],
         [ "Macro", "PreProc" ],
         [ "PreCondit", "PreProc" ],
 
-        [ "Type", "NONE", fg, "NONE" ],
+        [ "Type", bg, fg, "NONE" ],
         [ "StorageClass", "Type" ],
         [ "Structure", "Type" ],
         [ "Typedef", "Type" ],
@@ -147,7 +142,7 @@
         [ "MoreMsg", "ModeMsg" ],
         [ "Question", "ModeMsg" ],
 
-        [ "Ignore", "NONE", "NONE", "NONE" ],
+        [ "Ignore", "NonText" ],
         [ "Todo", "NONE", orange, "bold" ],
         [ "Underlined", "NONE", fg, "underline" ],
 
@@ -220,8 +215,6 @@
     #     :!erb -T - % > %:r.vim
 
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
-
-    # You don't need to edit anything beyond this line.
 -%>
 " Name:        <%= information[:name] %>.vim
 " Author:      <%= information[:author] %> <<%= information[:email] %>>

@@ -15,29 +15,29 @@ let colors_name = "photon"
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=235 ctermfg=251 cterm=NONE guibg=#262626 guifg=#c6c6c6 gui=NONE
     set background=dark
-    hi NonText ctermbg=NONE ctermfg=237 cterm=NONE guibg=NONE guifg=#3a3a3a gui=NONE
-    hi Comment ctermbg=NONE ctermfg=241 cterm=NONE guibg=NONE guifg=#626262 gui=NONE
-    hi Constant ctermbg=NONE ctermfg=140 cterm=NONE guibg=NONE guifg=#af87d7 gui=NONE
+    hi NonText ctermbg=235 ctermfg=237 cterm=NONE guibg=#262626 guifg=#3a3a3a gui=NONE
+    hi Comment ctermbg=235 ctermfg=241 cterm=NONE guibg=#262626 guifg=#626262 gui=NONE
+    hi Constant ctermbg=235 ctermfg=140 cterm=NONE guibg=#262626 guifg=#af87d7 gui=NONE
     hi! link Character Constant
     hi! link Number Constant
     hi! link Float Number
     hi! link Boolean Constant
     hi! link String Constant
-    hi Identifier ctermbg=NONE ctermfg=251 cterm=NONE guibg=NONE guifg=#c6c6c6 gui=NONE
+    hi Identifier ctermbg=235 ctermfg=251 cterm=NONE guibg=#262626 guifg=#c6c6c6 gui=NONE
     hi! link Function Identifier
-    hi Statement ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
+    hi Statement ctermbg=235 ctermfg=243 cterm=NONE guibg=#262626 guifg=#767676 gui=NONE
     hi! link Conditonal Statement
     hi! link Repeat Statement
     hi! link Label Statement
     hi! link Keyword Statement
     hi! link Exception Statement
-    hi Operator ctermbg=NONE ctermfg=251 cterm=bold guibg=NONE guifg=#c6c6c6 gui=bold
-    hi PreProc ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
+    hi Operator ctermbg=235 ctermfg=251 cterm=bold guibg=#262626 guifg=#c6c6c6 gui=bold
+    hi PreProc ctermbg=235 ctermfg=243 cterm=NONE guibg=#262626 guifg=#767676 gui=NONE
     hi! link Include PreProc
     hi! link Define PreProc
     hi! link Macro PreProc
     hi! link PreCondit PreProc
-    hi Type ctermbg=NONE ctermfg=251 cterm=NONE guibg=NONE guifg=#c6c6c6 gui=NONE
+    hi Type ctermbg=235 ctermfg=251 cterm=NONE guibg=#262626 guifg=#c6c6c6 gui=NONE
     hi! link StorageClass Type
     hi! link Structure Type
     hi! link Typedef Type
@@ -54,7 +54,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ModeMsg ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
     hi! link MoreMsg ModeMsg
     hi! link Question ModeMsg
-    hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi! link Ignore NonText
     hi Todo ctermbg=NONE ctermfg=167 cterm=bold guibg=NONE guifg=#d75f5f gui=bold
     hi Underlined ctermbg=NONE ctermfg=251 cterm=underline guibg=NONE guifg=#c6c6c6 gui=underline
     hi StatusLine ctermbg=237 ctermfg=140 cterm=NONE guibg=#3a3a3a guifg=#af87d7 gui=NONE
@@ -102,29 +102,29 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
     hi Normal ctermbg=black ctermfg=white cterm=NONE
     set background=dark
-    hi NonText ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi Comment ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi Constant ctermbg=NONE ctermfg=darkmagenta cterm=NONE
+    hi NonText ctermbg=black ctermfg=darkgray cterm=NONE
+    hi Comment ctermbg=black ctermfg=darkgray cterm=NONE
+    hi Constant ctermbg=black ctermfg=darkmagenta cterm=NONE
     hi! link Character Constant
     hi! link Number Constant
     hi! link Float Number
     hi! link Boolean Constant
     hi! link String Constant
-    hi Identifier ctermbg=NONE ctermfg=white cterm=NONE
+    hi Identifier ctermbg=black ctermfg=white cterm=NONE
     hi! link Function Identifier
-    hi Statement ctermbg=NONE ctermfg=darkgray cterm=NONE
+    hi Statement ctermbg=black ctermfg=darkgray cterm=NONE
     hi! link Conditonal Statement
     hi! link Repeat Statement
     hi! link Label Statement
     hi! link Keyword Statement
     hi! link Exception Statement
-    hi Operator ctermbg=NONE ctermfg=white cterm=bold
-    hi PreProc ctermbg=NONE ctermfg=darkgray cterm=NONE
+    hi Operator ctermbg=black ctermfg=white cterm=bold
+    hi PreProc ctermbg=black ctermfg=darkgray cterm=NONE
     hi! link Include PreProc
     hi! link Define PreProc
     hi! link Macro PreProc
     hi! link PreCondit PreProc
-    hi Type ctermbg=NONE ctermfg=white cterm=NONE
+    hi Type ctermbg=black ctermfg=white cterm=NONE
     hi! link StorageClass Type
     hi! link Structure Type
     hi! link Typedef Type
@@ -141,7 +141,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ModeMsg ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi! link MoreMsg ModeMsg
     hi! link Question ModeMsg
-    hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi! link Ignore NonText
     hi Todo ctermbg=NONE ctermfg=red cterm=bold
     hi Underlined ctermbg=NONE ctermfg=white cterm=underline
     hi StatusLine ctermbg=darkgray ctermfg=darkmagenta cterm=NONE

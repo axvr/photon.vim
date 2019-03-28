@@ -30,13 +30,19 @@ following in your Vim config.
 colorscheme photon
 ```
 
-To get the best possible experience, make sure that photon is the only theme
-set in your Vim config. This will prevent weird artefacts being left over from
-other colour schemes. Similarly, it is not a good idea to run `:colorscheme
-photon`, while Vim is already running - it won't look great.
+### Troubleshooting
 
-If you are having difficulties getting the colours to look like they do in the
-screenshots, please create an issue and I'll be happy to try and help.
+If you've installed the colour scheme but it doesn't quite look like the
+screenshots above:
+
+1. Make sure that photon is the only theme being set in your Vim configuration.
+2. Don't run `:colorscheme photon` manually.
+
+This issue is usually caused by atefacts being left over from a previous colour
+scheme.
+
+If you are still having difficulties getting the colours to look like they do
+in the screenshots, please create an issue and I'll be happy to try and help.
 
 ## Attribution
 
