@@ -4,21 +4,39 @@ A minimal and elegant dark colour scheme for Vim.
 
 ![photon.vim](https://github.com/axvr/photon.vim/raw/images/photon1.png)
 
+Photon is a low-contrast colour scheme, which cares about the little details.
+It is based on an old version of [paramount](https://github.com/owickstrom/vim-colors-paramount)
+and is designed to look exactly the same on 256 colour terminals as it does on
+true colour terminals.
+
 ## Gallery
 
-![](https://github.com/axvr/photon.vim/raw/images/photon1.png)
+<!-- ![](https://github.com/axvr/photon.vim/raw/images/photon1.png) -->
 ![](https://github.com/axvr/photon.vim/raw/images/photon2.png)
 ![](https://github.com/axvr/photon.vim/raw/images/photon3.png)
 ![](https://github.com/axvr/photon.vim/raw/images/photon4.png)
 
-_The source code shown in the above screenshots are from
-[txtdb](https://github.com/axvr/txtdb) and [irc.c](https://c9x.me/irc/)._
+_The files shown in the above screenshots are from
+[txtdb](https://github.com/axvr/txtdb) and [irc.c](https://c9x.me/irc/). The
+font is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) by
+[Raph Levien](https://levien.com/)._
 
 ## Usage
+
+Install this colour scheme using your preferred method, then place the
+following in your Vim config.
 
 ```vim
 colorscheme photon
 ```
+
+To get the best possible experience, make sure that photon is the only theme
+set in your Vim config. This will prevent weird artefacts being left over from
+other colour schemes. Similarly, it is not a good idea to run `:colorscheme
+photon`, while Vim is already running - it won't look great.
+
+If you are having difficulties getting the colours to look like they do in the
+screenshots, please create an issue and I'll be happy to try and help.
 
 ## Attribution
 
