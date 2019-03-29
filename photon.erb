@@ -210,23 +210,7 @@
     # Vim variable won't be set.
     #
     # The expected values are colors defined in step 2.
-    terminal_ansi_colors = [
-        bg,
-        bgd_1,
-        bgd_2,
-        bgl_1,
-        bgl_2,
-        bgl_3,
-        bgl_4,
-        fg,
-        purple,
-        orange,
-        grey,
-        yellow,
-        green,
-        blue,
-        red
-    ]
+    terminal_ansi_colors = [] # TODO set values for Vim's built-in terminal
 
     # Step 4: generation
     #
@@ -303,7 +287,7 @@ let links = [
 <%= '' %>
 augroup <%= information[:name].downcase %>
     autocmd!
-    autocmd ColorScheme * if expand("<amatch>") == "<%= information[:name].downcase %>" | for link in links | execute 'hi link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
+    autocmd ColorScheme * if expand("<amatch>") == "<%= information[:name].downcase %>" | for link in links | execute 'hi! link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
 augroup END
 <% end -%>
 

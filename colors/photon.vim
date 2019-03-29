@@ -162,7 +162,7 @@ let links = [
 
 augroup photon
     autocmd!
-    autocmd ColorScheme * if expand("<amatch>") == "photon" | for link in links | execute 'hi link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
+    autocmd ColorScheme * if expand("<amatch>") == "photon" | for link in links | execute 'hi! link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
 augroup END
 
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
