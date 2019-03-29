@@ -38,8 +38,8 @@ screenshots above:
 1. Make sure that photon is the only theme being set in your Vim configuration.
 2. Don't run `:colorscheme photon` manually.
 
-This issue is usually caused by atefacts being left over from a previous colour
-scheme.
+This issue is usually caused by artefacts being left over from a previous
+colour scheme.
 
 If you are still having difficulties getting the colours to look like they do
 in the screenshots, please create an issue and I'll be happy to try and help.
