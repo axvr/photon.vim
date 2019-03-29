@@ -93,35 +93,35 @@
 
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
-        [ "NonText", bg, bgl_2, "NONE" ],
-        [ "Comment", bg, bgl_4, "NONE" ],
+        [ "NonText", "bg", bgl_2, "NONE" ],
+        [ "Comment", "bg", bgl_4, "NONE" ],
 
-        [ "Constant", bg, purple, "NONE" ],
+        [ "Constant", "bg", purple, "NONE" ],
         [ "Character", "Constant" ],
         [ "Number", "Constant" ],
         [ "Float", "Number" ],
         [ "Boolean", "Constant" ],
         [ "String", "Constant" ],
 
-        [ "Identifier", bg, fg, "NONE" ],
+        [ "Identifier", "bg", fg, "NONE" ],
         [ "Function", "Identifier" ],
 
-        [ "Statement", bg, grey, "NONE" ],
+        [ "Statement", "bg", grey, "NONE" ],
         [ "Conditonal", "Statement" ],
         [ "Repeat", "Statement" ],
         [ "Label", "Statement" ],
         [ "Keyword", "Statement" ],
         [ "Exception", "Statement" ],
 
-        [ "Operator", bg, fg, "bold" ],
+        [ "Operator", "bg", fg, "bold" ],
 
-        [ "PreProc", bg, grey, "NONE" ],
+        [ "PreProc", "bg", grey, "NONE" ],
         [ "Include", "PreProc" ],
         [ "Define", "PreProc" ],
         [ "Macro", "PreProc" ],
         [ "PreCondit", "PreProc" ],
 
-        [ "Type", bg, fg, "NONE" ],
+        [ "Type", "bg", fg, "NONE" ],
         [ "StorageClass", "Type" ],
         [ "Structure", "Type" ],
         [ "Typedef", "Type" ],
@@ -204,6 +204,30 @@
         # TODO improve colours for markdown, and org files
     ]
 
+    # Define the color platte used by :terminal when in GUI Vim
+    # or in TUI Vim when 'termguicolors' is enabled. If this list
+    # is empty or if it doesn't contain exactly 16 items, the corresponding
+    # Vim variable won't be set.
+    #
+    # The expected values are colors defined in step 2.
+    terminal_ansi_colors = [
+        bg,
+        bgd_1,
+        bgd_2,
+        bgl_1,
+        bgl_2,
+        bgl_3,
+        bgl_4,
+        fg,
+        purple,
+        orange,
+        grey,
+        yellow,
+        green,
+        blue,
+        red
+    ]
+
     # Step 4: generation
     #
     # From a separate shell:
@@ -228,33 +252,59 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "<%= information[:name] %>"
+let colors_name = "<%= information[:name].downcase %>"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 <% for highlight in highlights -%>
-<% if highlight.length == 2 -%>
-    hi! link <%= highlight[0] %> <%= highlight[1] %>
-<% elsif highlight.length == 4 -%>
+<% if highlight.length == 4 -%>
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %>
 <% if highlight[0] == "Normal" -%>
+<%= '' %>
     set background=<%= information[:background] %>
+<%= '' %>
 <% end -%>
-<% else -%>
+<% elsif highlight.length > 4 -%>
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %> guisp=<%= highlight[4].kind_of?(String) ? highlight[4] : highlight[4][0] %>
 <% end -%>
 <% end -%>
+<% if terminal_ansi_colors.length == 16 -%>
+<%= '' %>
+    let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+        \ '<%= color[0] %>',
+<% end -%>
+        \ ]
+<% end -%>
+
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
+<%= '' %>
 <% for highlight in highlights -%>
-<% if highlight.length == 2 -%>
-    hi! link <%= highlight[0] %> <%= highlight[1] %>
-<% else -%>
+<% if highlight.length > 2 -%>
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][2] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][2] %> cterm=<%= highlight[3] %>
 <% if highlight[0] == "Normal" -%>
+<%= '' %>
     set background=<%= information[:background] %>
+<%= '' %>
 <% end -%>
 <% end -%>
 <% end -%>
 endif
+<% links = highlights.select do |highlight| -%>
+<% highlight.length == 2 -%>
+<% end -%>
+<% if links.length > 0 -%>
+<%= '' %>
+let links = [
+<% for link in links -%>
+    \ ['<%= link[0] %>', '<%= link[1] %>'],
+<% end -%>
+    \ ]
+<%= '' %>
+augroup <%= information[:name].downcase %>
+    autocmd!
+    autocmd ColorScheme * if expand("<amatch>") == "<%= information[:name].downcase %>" | for link in links | execute 'hi link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
+augroup END
+<% end -%>
 
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
