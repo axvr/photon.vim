@@ -204,7 +204,7 @@
         # TODO improve colours for markdown, and org files
     ]
 
-    # Define the color platte used by :terminal when in GUI Vim
+    # Define the color palette used by :terminal when in GUI Vim
     # or in TUI Vim when 'termguicolors' is enabled. If this list
     # is empty or if it doesn't contain exactly 16 items, the corresponding
     # Vim variable won't be set.
@@ -220,7 +220,7 @@
     #
     # From Vim:
     #
-    #     :!erb -T - % > %:r.vim
+    #     :!erb -T - % > %<.vim
 
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
 -%>
@@ -251,14 +251,6 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %> guisp=<%= highlight[4].kind_of?(String) ? highlight[4] : highlight[4][0] %>
 <% end -%>
 <% end -%>
-<% if terminal_ansi_colors.length == 16 -%>
-<%= '' %>
-    let g:terminal_ansi_colors = [
-<% for color in terminal_ansi_colors -%>
-        \ '<%= color[0] %>',
-<% end -%>
-        \ ]
-<% end -%>
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -279,16 +271,17 @@ endif
 <% end -%>
 <% if links.length > 0 -%>
 <%= '' %>
-let links = [
 <% for link in links -%>
-    \ ['<%= link[0] %>', '<%= link[1] %>'],
+hi! link <%= link[0] %> <%= link[1] %>
 <% end -%>
-    \ ]
+<% end -%>
+<% if terminal_ansi_colors.length == 16 -%>
 <%= '' %>
-augroup <%= information[:name].downcase %>
-    autocmd!
-    autocmd ColorScheme * if expand("<amatch>") == "<%= information[:name].downcase %>" | for link in links | execute 'hi! link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
-augroup END
+let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+        \ '<%= color[0] %>',
+<% end -%>
+        \ ]
 <% end -%>
 
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)

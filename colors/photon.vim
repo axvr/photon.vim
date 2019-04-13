@@ -121,48 +121,41 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi DiffText ctermbg=NONE ctermfg=red cterm=NONE
 endif
 
-let links = [
-    \ ['Character', 'Constant'],
-    \ ['Number', 'Constant'],
-    \ ['Float', 'Number'],
-    \ ['Boolean', 'Constant'],
-    \ ['String', 'Constant'],
-    \ ['Function', 'Identifier'],
-    \ ['Conditonal', 'Statement'],
-    \ ['Repeat', 'Statement'],
-    \ ['Label', 'Statement'],
-    \ ['Keyword', 'Statement'],
-    \ ['Exception', 'Statement'],
-    \ ['Include', 'PreProc'],
-    \ ['Define', 'PreProc'],
-    \ ['Macro', 'PreProc'],
-    \ ['PreCondit', 'PreProc'],
-    \ ['StorageClass', 'Type'],
-    \ ['Structure', 'Type'],
-    \ ['Typedef', 'Type'],
-    \ ['SpecialChar', 'Special'],
-    \ ['Tag', 'Special'],
-    \ ['Delimiter', 'Special'],
-    \ ['SpecialComment', 'Special'],
-    \ ['Debug', 'Special'],
-    \ ['ErrorMsg', 'Error'],
-    \ ['WarningMsg', 'Warning'],
-    \ ['MoreMsg', 'ModeMsg'],
-    \ ['Question', 'ModeMsg'],
-    \ ['Ignore', 'NonText'],
-    \ ['StatusLineTerm', 'StatusLine'],
-    \ ['StatusLineTermNC', 'StatusLineNC'],
-    \ ['TabLine', 'StatusLineNC'],
-    \ ['TabLineFill', 'StatusLineNC'],
-    \ ['TabLineSel', 'StatusLine'],
-    \ ['CursorColumn', 'CursorLine'],
-    \ ['diffAdded', 'DiffAdd'],
-    \ ['diffRemoved', 'DiffDelete'],
-    \ ]
-
-augroup photon
-    autocmd!
-    autocmd ColorScheme * if expand("<amatch>") == "photon" | for link in links | execute 'hi! link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
-augroup END
+hi! link Character Constant
+hi! link Number Constant
+hi! link Float Number
+hi! link Boolean Constant
+hi! link String Constant
+hi! link Function Identifier
+hi! link Conditonal Statement
+hi! link Repeat Statement
+hi! link Label Statement
+hi! link Keyword Statement
+hi! link Exception Statement
+hi! link Include PreProc
+hi! link Define PreProc
+hi! link Macro PreProc
+hi! link PreCondit PreProc
+hi! link StorageClass Type
+hi! link Structure Type
+hi! link Typedef Type
+hi! link SpecialChar Special
+hi! link Tag Special
+hi! link Delimiter Special
+hi! link SpecialComment Special
+hi! link Debug Special
+hi! link ErrorMsg Error
+hi! link WarningMsg Warning
+hi! link MoreMsg ModeMsg
+hi! link Question ModeMsg
+hi! link Ignore NonText
+hi! link StatusLineTerm StatusLine
+hi! link StatusLineTermNC StatusLineNC
+hi! link TabLine StatusLineNC
+hi! link TabLineFill StatusLineNC
+hi! link TabLineSel StatusLine
+hi! link CursorColumn CursorLine
+hi! link diffAdded DiffAdd
+hi! link diffRemoved DiffDelete
 
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
