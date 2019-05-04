@@ -210,7 +210,29 @@
     # Vim variable won't be set.
     #
     # The expected values are colors defined in step 2.
-    terminal_ansi_colors = [] # TODO set values for Vim's built-in terminal
+    #
+    # TODO: move these colours into variables and share them with the rest of photon.
+    terminal_ansi_colors = [
+        # Dark
+        bg,           # black
+        ["#cf3f61"],  # red
+        ["#7bb75b"],  # green
+        ["#e9b32a"],  # yellow
+        ["#3465a4"],  # blue
+        ["#a57fc4"],  # magenta
+        ["#389aad"],  # cyan
+        ["#fafaf6"],  # white
+
+        # Bright
+        ["#555753"],  # black
+        ["#ef2929"],  # red
+        ["#8ae234"],  # green
+        ["#fce94f"],  # yello
+        ["#729fcf"],  # blue
+        ["#ad7fa8"],  # magenta
+        ["#34e2e2"],  # cyan
+        fg            # white
+    ]
 
     # Step 4: generation
     #

@@ -158,4 +158,23 @@ hi! link CursorColumn CursorLine
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 
+let g:terminal_ansi_colors = [
+        \ '#262626',
+        \ '#cf3f61',
+        \ '#7bb75b',
+        \ '#e9b32a',
+        \ '#3465a4',
+        \ '#a57fc4',
+        \ '#389aad',
+        \ '#fafaf6',
+        \ '#555753',
+        \ '#ef2929',
+        \ '#8ae234',
+        \ '#fce94f',
+        \ '#729fcf',
+        \ '#ad7fa8',
+        \ '#34e2e2',
+        \ '#c6c6c6',
+        \ ]
+
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
