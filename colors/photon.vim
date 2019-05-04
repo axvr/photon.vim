@@ -17,8 +17,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
     set background=dark
 
-    hi NonText ctermbg=bg ctermfg=237 cterm=NONE guibg=bg guifg=#3a3a3a gui=NONE
+    hi NonText ctermbg=bg ctermfg=238 cterm=NONE guibg=bg guifg=#444444 gui=NONE
     hi Comment ctermbg=bg ctermfg=241 cterm=NONE guibg=bg guifg=#626262 gui=NONE
+    hi Conceal ctermbg=bg ctermfg=241 cterm=NONE guibg=bg guifg=#626262 gui=NONE
     hi Constant ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
     hi Identifier ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#c6c6c6 gui=NONE
     hi Statement ctermbg=bg ctermfg=243 cterm=NONE guibg=bg guifg=#767676 gui=NONE
@@ -42,6 +43,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi CursorLine ctermbg=236 ctermfg=NONE cterm=NONE guibg=#303030 guifg=NONE gui=NONE
     hi ColorColumn ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1c1c1c guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
+    hi helpHyperTextJump ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
     hi Visual ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
     hi VisualNOS ctermbg=238 ctermfg=NONE cterm=NONE guibg=#444444 guifg=NONE gui=NONE
     hi Pmenu ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
@@ -74,6 +76,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
 
     hi NonText ctermbg=bg ctermfg=darkgray cterm=NONE
     hi Comment ctermbg=bg ctermfg=darkgray cterm=NONE
+    hi Conceal ctermbg=bg ctermfg=darkgray cterm=NONE
     hi Constant ctermbg=bg ctermfg=darkmagenta cterm=NONE
     hi Identifier ctermbg=bg ctermfg=white cterm=NONE
     hi Statement ctermbg=bg ctermfg=darkgray cterm=NONE
@@ -97,6 +100,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi CursorLine ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi ColorColumn ctermbg=black ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=darkgray cterm=NONE
+    hi helpHyperTextJump ctermbg=bg ctermfg=darkmagenta cterm=NONE
     hi Visual ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
