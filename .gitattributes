@@ -1,4 +1,4 @@
-# See: https://axvr.io/docs/ascribe
+# See: https://axvr.io/projects/ascribe
 *           text=auto eol=lf trim-trailing-whitespace final-newline
 *.erb       expand-tab tab-stop=4 linguist-language=Ruby
 Makefile    -expand-tab
