@@ -1,0 +1,28 @@
+VIM:
+  - Improve spell check colours
+  - Improve diff colours
+  - Git commit title should be brighter
+    - Maybe use bold white for `Title` group
+  - Maybe use a similar blue to the terminal variant
+  - Update the README (show differences between paramount and photon)
+
+EMACS:
+  - Finish the GNU Emacs port (photon.el)
+
+TERMINAL:
+  - Publish the terminal colours
+  - Switch to colours more similar to those used in the Vim theme (and try to
+    use the 256 colour palette)
+  - Tools I use the terminal theme for
+    - Mintty
+    - Termux
+    - St
+
+WEBSITE:
+  Create a page on my website which can explain what it is, why it looks the
+  way it does and give some background info.
+
+  Provide the colours for the terminal version (and explain why it is more
+  colourful than the editor variant).
+
+  Link to both of the repository mirrors (Sourcehut and GitHub).
