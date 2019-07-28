@@ -1,11 +1,9 @@
 <%
     # RNB, A VIM COLORSCHEME TEMPLATE
     # Author:        Romain Lafourcade (https://github.com/romainl)
-    # Canonical URL: https://gist.github.com/romainl/5cd2f4ec222805f49eca
+    # Canonical URL: https://github.com/romainl/vim-rnb
 
-    # NOTE: Ruby is needed to generate this colorscheme.
-
-    # Step 1: information
+    # Information:
     #
     # Make sure the name of your colorscheme is unique and attractive.
     # The description should fit in a single line with no linefeed.
@@ -15,24 +13,26 @@
         author:      "Alex Vear",
         email:       "av@axvr.io",
         name:        "photon",
-        description: "A minimal and elegant dark colour scheme for Vim.",
+        description: "An elegant, dark colour scheme with minimal syntax highlighting",
         background:  "dark",
         webpage:     "https://github.com/axvr/photon.vim",
         licence:     "MIT (2019)"
     }
 
-    # Step 2: colors
+    # Color palette:
     #
     # black = [       give each color a distinctive name
-    #   "#000000",    hexadecimal color for GVim/MacVim and "true colors" terminals
-    #   0,            integer between 0 and 255 for terminals supporting 256 colors
-    #   "black"       color name for less capable color terminals, can be "darkred", "red",
-    #                 "darkgreen", "green", "darkyellow", "yellow", "darkblue", "blue",
-    #                 "darkmagenta", "magenta", "black", "darkgrey", "grey", "white"
+    #   "#000000",    hexadecimal color used in GVim/MacVim or "NONE"
+    #   0,            integer between 0 and 255 used by terminals supporting 256 colors
+    #                 or "NONE"
+    #   "black"       color name used by less capable color terminals, can be "darkred",
+    #                 "red", "darkgreen", "green", "darkyellow", "yellow", "darkblue",
+    #                 "blue", "darkmagenta", "magenta", "black", "darkgrey", "grey",
+    #                 "white", or "NONE"
     # ]
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
-    # to work in GVim (Windows/Linux), MacVim, and any properly set up terminal emulator.
+    # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
 
     # Background
     bg = ["#262626", 235, "black"]
@@ -60,7 +60,7 @@
     blue = ["#5f87ff", 68, "blue"] # TODO improve this colour
     red = ["#af5f87", 132, "darkred"] # TODO make brighter?
 
-    # Step 3: highlights
+    # Highlights:
     #
     # You can define highlight groups like this:
     #
@@ -72,9 +72,10 @@
     #   ]
     #
     # The sample above tells Vim to render normal text in dark gray against a white
-    # background, without any styling.
+    # background, without any other styling.
     #
-    # or link an highlight group to another:
+    # Or you can link an highlight group to another. Here, "Title" will inherit its style from
+    # "Normal":
     #
     #   [ "Title", "Normal" ]
     #
@@ -201,16 +202,12 @@
         [ "DiffText", "NONE", orange, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ]
-
-        # TODO improve colours for markdown, and org files
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
     # or in TUI Vim when 'termguicolors' is enabled. If this list
     # is empty or if it doesn't contain exactly 16 items, the corresponding
     # Vim variable won't be set.
-    #
-    # The expected values are colors defined in step 2.
     #
     # TODO: move these colours into variables and share them with the rest of photon.
     terminal_ansi_colors = [
@@ -235,16 +232,6 @@
         fg            # white
     ]
 
-    # Step 4: generation
-    #
-    # From a separate shell:
-    #
-    #     $ erb -T - bar.erb > bar.vim
-    #
-    # From Vim:
-    #
-    #     :!erb -T - % > %<.vim
-
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
 -%>
 " Name:        <%= information[:name] %>.vim
@@ -252,6 +239,7 @@
 " Webpage:     <%= information[:webpage] %>
 " Description: <%= information[:description] %>
 " Licence:     <%= information[:licence] %>
+" Last Change: <%= Time.new.strftime "%Y-%m-%d" %>
 
 hi clear
 
@@ -307,4 +295,4 @@ let g:terminal_ansi_colors = [
         \ ]
 <% end -%>
 
-" Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
+" Generated with RNB (https://github.com/romainl/vim-rnb)

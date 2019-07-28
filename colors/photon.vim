@@ -1,8 +1,9 @@
 " Name:        photon.vim
 " Author:      Alex Vear <av@axvr.io>
 " Webpage:     https://github.com/axvr/photon.vim
-" Description: A minimal and elegant dark colour scheme for Vim.
+" Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
+" Last Change: 2019-07-28
 
 hi clear
 
@@ -181,4 +182,4 @@ let g:terminal_ansi_colors = [
         \ '#c6c6c6',
         \ ]
 
-" Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
+" Generated with RNB (https://github.com/romainl/vim-rnb)
