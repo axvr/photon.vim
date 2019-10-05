@@ -3,10 +3,9 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2019-07-28
+" Last Change: 2019-10-05
 
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
@@ -24,7 +23,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Constant ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
     hi Identifier ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#c6c6c6 gui=NONE
     hi Statement ctermbg=bg ctermfg=243 cterm=NONE guibg=bg guifg=#767676 gui=NONE
-    hi Operator ctermbg=bg ctermfg=251 cterm=bold guibg=bg guifg=#c6c6c6 gui=bold
+    hi Operator ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#c6c6c6 gui=NONE
     hi PreProc ctermbg=bg ctermfg=243 cterm=NONE guibg=bg guifg=#767676 gui=NONE
     hi Type ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#c6c6c6 gui=NONE
     hi Special ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
@@ -81,7 +80,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Constant ctermbg=bg ctermfg=darkmagenta cterm=NONE
     hi Identifier ctermbg=bg ctermfg=white cterm=NONE
     hi Statement ctermbg=bg ctermfg=darkgray cterm=NONE
-    hi Operator ctermbg=bg ctermfg=white cterm=bold
+    hi Operator ctermbg=bg ctermfg=white cterm=NONE
     hi PreProc ctermbg=bg ctermfg=darkgray cterm=NONE
     hi Type ctermbg=bg ctermfg=white cterm=NONE
     hi Special ctermbg=NONE ctermfg=darkgray cterm=NONE

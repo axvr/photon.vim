@@ -39,7 +39,6 @@
 
     # Darker background shades
     bgd_1 = ["#1c1c1c", 234, "black"]
-    bgd_2 = ["#121212", 233, "black"]
 
     # Lighter background shades
     bgl_1 = ["#303030", 236, "darkgray"]
@@ -57,8 +56,8 @@
 
     yellow = ["#af8700", 136, "darkyellow"]
     green = ["#87af87", 108, "darkgreen"]
-    blue = ["#5f87ff", 68, "blue"] # TODO improve this colour
-    red = ["#af5f87", 132, "darkred"] # TODO make brighter?
+    blue = ["#5f87ff", 68, "blue"]
+    red = ["#af5f87", 132, "darkred"]
 
     # Highlights:
     #
@@ -115,7 +114,7 @@
         [ "Keyword", "Statement" ],
         [ "Exception", "Statement" ],
 
-        [ "Operator", "bg", fg, "bold" ],
+        [ "Operator", "bg", fg, "NONE" ],
 
         [ "PreProc", "bg", grey, "NONE" ],
         [ "Include", "PreProc" ],
@@ -187,7 +186,6 @@
         [ "Directory", "NONE", purple, "NONE" ],
         [ "MatchParen", "NONE", orange, "bold" ],
 
-        # TODO improve the colours used here
         [ "SpellBad", "NONE", red, "underline" ],
         [ "SpellCap", "NONE", green, "underline" ],
         [ "SpellLocal", "NONE", blue, "underline" ],
@@ -195,7 +193,6 @@
 
         [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
 
-        # TODO improve the colours used here
         [ "DiffAdd", "NONE", green, "NONE" ],
         [ "DiffChange", "NONE", yellow, "NONE" ],
         [ "DiffDelete", "NONE", red, "NONE" ],
@@ -225,7 +222,7 @@
         ["#555753"],  # black
         ["#ef2929"],  # red
         ["#8ae234"],  # green
-        ["#fce94f"],  # yello
+        ["#fce94f"],  # yellow
         ["#729fcf"],  # blue
         ["#ad7fa8"],  # magenta
         ["#34e2e2"],  # cyan
@@ -242,7 +239,6 @@
 " Last Change: <%= Time.new.strftime "%Y-%m-%d" %>
 
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
