@@ -36,14 +36,13 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi StatusLineNC ctermbg=236 ctermfg=243 cterm=NONE guibg=#303030 guifg=#767676 gui=NONE
     hi WildMenu ctermbg=236 ctermfg=167 cterm=NONE guibg=#303030 guifg=#d75f5f gui=NONE
     hi VertSplit ctermbg=236 ctermfg=236 cterm=NONE guibg=#303030 guifg=#303030 gui=NONE
-    hi Title ctermbg=NONE ctermfg=243 cterm=bold guibg=NONE guifg=#767676 gui=bold
+    hi Title ctermbg=NONE ctermfg=251 cterm=bold guibg=NONE guifg=#c6c6c6 gui=bold
     hi LineNr ctermbg=NONE ctermfg=241 cterm=NONE guibg=NONE guifg=#626262 gui=NONE
     hi CursorLineNr ctermbg=236 ctermfg=140 cterm=NONE guibg=#303030 guifg=#af87d7 gui=NONE
     hi Cursor ctermbg=140 ctermfg=251 cterm=NONE guibg=#af87d7 guifg=#c6c6c6 gui=NONE
     hi CursorLine ctermbg=236 ctermfg=NONE cterm=NONE guibg=#303030 guifg=NONE gui=NONE
     hi ColorColumn ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1c1c1c guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
-    hi helpHyperTextJump ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
     hi Visual ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
     hi VisualNOS ctermbg=238 ctermfg=NONE cterm=NONE guibg=#444444 guifg=NONE gui=NONE
     hi Pmenu ctermbg=237 ctermfg=NONE cterm=NONE guibg=#3a3a3a guifg=NONE gui=NONE
@@ -66,6 +65,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi DiffChange ctermbg=NONE ctermfg=136 cterm=NONE guibg=NONE guifg=#af8700 gui=NONE
     hi DiffDelete ctermbg=NONE ctermfg=132 cterm=NONE guibg=NONE guifg=#af5f87 gui=NONE
     hi DiffText ctermbg=NONE ctermfg=167 cterm=NONE guibg=NONE guifg=#d75f5f gui=NONE
+    hi helpHyperTextJump ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -93,14 +93,13 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi StatusLineNC ctermbg=darkgray ctermfg=darkgray cterm=NONE
     hi WildMenu ctermbg=darkgray ctermfg=red cterm=NONE
     hi VertSplit ctermbg=darkgray ctermfg=darkgray cterm=NONE
-    hi Title ctermbg=NONE ctermfg=darkgray cterm=bold
+    hi Title ctermbg=NONE ctermfg=white cterm=bold
     hi LineNr ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi CursorLineNr ctermbg=darkgray ctermfg=darkmagenta cterm=NONE
     hi Cursor ctermbg=darkmagenta ctermfg=white cterm=NONE
     hi CursorLine ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi ColorColumn ctermbg=black ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi helpHyperTextJump ctermbg=bg ctermfg=darkmagenta cterm=NONE
     hi Visual ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
@@ -123,6 +122,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi DiffChange ctermbg=NONE ctermfg=darkyellow cterm=NONE
     hi DiffDelete ctermbg=NONE ctermfg=darkred cterm=NONE
     hi DiffText ctermbg=NONE ctermfg=red cterm=NONE
+    hi helpHyperTextJump ctermbg=bg ctermfg=darkmagenta cterm=NONE
 endif
 
 hi! link Character Constant
@@ -161,6 +161,9 @@ hi! link TabLineSel StatusLine
 hi! link CursorColumn CursorLine
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
+hi! link htmlTag htmlTagName
+hi! link htmlEndTag htmlTag
+hi! link gitcommitSummary Title
 
 let g:terminal_ansi_colors = [
         \ '#262626',

@@ -157,7 +157,7 @@
         [ "WildMenu", bgl_1, orange, "NONE" ],
         [ "VertSplit", bgl_1, bgl_1, "NONE" ],
 
-        [ "Title", "NONE", grey, "bold" ],
+        [ "Title", "NONE", fg, "bold" ],
 
         [ "LineNr", "NONE", bgl_4, "NONE" ],
         [ "CursorLineNr", bgl_1, purple, "NONE" ],
@@ -166,8 +166,6 @@
         [ "CursorColumn", "CursorLine" ],
         [ "ColorColumn", bgd_1, "NONE", "NONE" ],
         [ "SignColumn", "NONE", grey, "NONE" ],
-
-        [ "helpHyperTextJump", "bg", purple, "NONE" ],
 
         [ "Visual", bgl_2, "NONE", "NONE" ],
         [ "VisualNOS", bgl_3, "NONE", "NONE" ],
@@ -198,7 +196,12 @@
         [ "DiffDelete", "NONE", red, "NONE" ],
         [ "DiffText", "NONE", orange, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
-        [ "diffRemoved", "DiffDelete" ]
+        [ "diffRemoved", "DiffDelete" ],
+
+        [ "helpHyperTextJump", "bg", purple, "NONE" ],
+        [ "htmlTag", "htmlTagName" ],
+        [ "htmlEndTag", "htmlTag" ],
+        [ "gitcommitSummary", "Title" ]
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
