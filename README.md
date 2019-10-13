@@ -59,8 +59,8 @@ screenshots, please create an issue and I'll be happy to try and help.
 
 I have created a basic [GNU Emacs](https://www.gnu.org/software/emacs/) port
 which is far from finished, but I'm not working on it anymore as I no longer
-use Emacs. If you want it anyway you can get it
-[here](https://raw.githubusercontent.com/axvr/dotfiles/16a3420024cadd773981ebf33bf6fe593bd57921/emacs/.emacs.d/photon-theme.el).
+use Emacs. If you want it anyway you can get it from the
+[`contrib` branch](https://raw.githubusercontent.com/axvr/photon.vim/contrib/emacs/photon-theme.el).
 
 ## Attribution
 
