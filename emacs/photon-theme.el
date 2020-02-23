@@ -162,6 +162,18 @@
 
    ;;; TODO: Org, company, magit?, flymake, ido (and/or ivy)
 
+   ;;; Org mode
+   (org-document-title :foreground fg :weight bold)
+   (outline-1 :inherit org-document-title)
+   (outline-2 :inherit outline-1)
+   (outline-3 :inherit outline-2)
+   (outline-4 :inherit outline-3)
+   (outline-5 :inherit outline-4)
+   (outline-6 :inherit outline-5)
+   (outline-7 :inherit outline-6)
+   (outline-8 :inherit outline-7)
+   (org-todo :foreground orange :weight bold)
+
    ))
 
 ;; TODO: terminal colours
