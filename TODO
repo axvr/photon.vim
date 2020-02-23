@@ -1,7 +1,7 @@
 - Improve spell check colours
 - Improve diff colours
-- Improve terminal colours (try to use colours similar to those in the Vim theme and aim to use the 256 colour palette).
-- Add terminal colours to `contrib` branch (Mintty, Termux, St) (explain why they are more colourful than the editor variant).
+- Create a proper Photon based terminal theme (but more colourful than regular Photon).
+- Add terminal colours to `contrib` branch (Mintty, Termux, St).
 - Brighten foreground colour?
 
 Vim check_colors.vim compliance

@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2019-10-05
+" Last Change: 2019-12-08
 
 hi clear
 if exists("syntax_on")
@@ -167,13 +167,13 @@ hi! link gitcommitSummary Title
 
 let g:terminal_ansi_colors = [
         \ '#262626',
-        \ '#cf3f61',
-        \ '#7bb75b',
-        \ '#e9b32a',
+        \ '#ac2c2c',
+        \ '#4e9a06',
+        \ '#c4a000',
         \ '#3465a4',
-        \ '#a57fc4',
+        \ '#75507b',
         \ '#389aad',
-        \ '#fafaf6',
+        \ '#d3d7cf',
         \ '#555753',
         \ '#ef2929',
         \ '#8ae234',
