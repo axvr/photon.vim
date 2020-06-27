@@ -53,11 +53,9 @@
     purple = ["#af87d7", 140, "darkmagenta"]
     orange = ["#d75f5f", 167, "red"]
     grey = ["#767676", 243, "darkgray"]
-
-    yellow = ["#af8700", 136, "darkyellow"]
     green = ["#87af87", 108, "darkgreen"]
-    blue = ["#5f87ff", 68, "blue"]
     red = ["#af5f87", 132, "darkred"]
+    yellow = ["#d7af5f", 179, "darkyellow"]
 
     # Highlights:
     #
@@ -186,15 +184,15 @@
 
         [ "SpellBad", "NONE", red, "underline" ],
         [ "SpellCap", "NONE", green, "underline" ],
-        [ "SpellLocal", "NONE", blue, "underline" ],
-        [ "SpellRare", "NONE", yellow, "underline" ],
+        [ "SpellLocal", "NONE", yellow, "underline" ],
+        [ "SpellRare", "SpellLocal" ],
 
         [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
 
-        [ "DiffAdd", "NONE", green, "NONE" ],
-        [ "DiffChange", "NONE", yellow, "NONE" ],
-        [ "DiffDelete", "NONE", red, "NONE" ],
-        [ "DiffText", "NONE", orange, "NONE" ],
+        [ "DiffAdd", bgl_1, green, "NONE" ],
+        [ "DiffChange", bgl_1, "NONE", "NONE" ],
+        [ "DiffDelete", bgl_1, red, "NONE" ],
+        [ "DiffText", bgl_1, yellow, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
 

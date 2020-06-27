@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2019-12-08
+" Last Change: 2020-06-27
 
 hi clear
 if exists("syntax_on")
@@ -28,7 +28,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Type ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#c6c6c6 gui=NONE
     hi Special ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
     hi Error ctermbg=NONE ctermfg=132 cterm=NONE guibg=NONE guifg=#af5f87 gui=NONE
-    hi Warning ctermbg=NONE ctermfg=136 cterm=NONE guibg=NONE guifg=#af8700 gui=NONE
+    hi Warning ctermbg=NONE ctermfg=179 cterm=NONE guibg=NONE guifg=#d7af5f gui=NONE
     hi ModeMsg ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
     hi Todo ctermbg=NONE ctermfg=167 cterm=bold guibg=NONE guifg=#d75f5f gui=bold
     hi Underlined ctermbg=NONE ctermfg=251 cterm=underline guibg=NONE guifg=#c6c6c6 gui=underline
@@ -58,13 +58,12 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi MatchParen ctermbg=NONE ctermfg=167 cterm=bold guibg=NONE guifg=#d75f5f gui=bold
     hi SpellBad ctermbg=NONE ctermfg=132 cterm=underline guibg=NONE guifg=#af5f87 gui=underline
     hi SpellCap ctermbg=NONE ctermfg=108 cterm=underline guibg=NONE guifg=#87af87 gui=underline
-    hi SpellLocal ctermbg=NONE ctermfg=68 cterm=underline guibg=NONE guifg=#5f87ff gui=underline
-    hi SpellRare ctermbg=NONE ctermfg=136 cterm=underline guibg=NONE guifg=#af8700 gui=underline
+    hi SpellLocal ctermbg=NONE ctermfg=179 cterm=underline guibg=NONE guifg=#d7af5f gui=underline
     hi QuickFixLine ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1c1c1c guifg=NONE gui=NONE
-    hi DiffAdd ctermbg=NONE ctermfg=108 cterm=NONE guibg=NONE guifg=#87af87 gui=NONE
-    hi DiffChange ctermbg=NONE ctermfg=136 cterm=NONE guibg=NONE guifg=#af8700 gui=NONE
-    hi DiffDelete ctermbg=NONE ctermfg=132 cterm=NONE guibg=NONE guifg=#af5f87 gui=NONE
-    hi DiffText ctermbg=NONE ctermfg=167 cterm=NONE guibg=NONE guifg=#d75f5f gui=NONE
+    hi DiffAdd ctermbg=236 ctermfg=108 cterm=NONE guibg=#303030 guifg=#87af87 gui=NONE
+    hi DiffChange ctermbg=236 ctermfg=NONE cterm=NONE guibg=#303030 guifg=NONE gui=NONE
+    hi DiffDelete ctermbg=236 ctermfg=132 cterm=NONE guibg=#303030 guifg=#af5f87 gui=NONE
+    hi DiffText ctermbg=236 ctermfg=179 cterm=NONE guibg=#303030 guifg=#d7af5f gui=NONE
     hi helpHyperTextJump ctermbg=bg ctermfg=140 cterm=NONE guibg=bg guifg=#af87d7 gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
@@ -115,13 +114,12 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi MatchParen ctermbg=NONE ctermfg=red cterm=bold
     hi SpellBad ctermbg=NONE ctermfg=darkred cterm=underline
     hi SpellCap ctermbg=NONE ctermfg=darkgreen cterm=underline
-    hi SpellLocal ctermbg=NONE ctermfg=blue cterm=underline
-    hi SpellRare ctermbg=NONE ctermfg=darkyellow cterm=underline
+    hi SpellLocal ctermbg=NONE ctermfg=darkyellow cterm=underline
     hi QuickFixLine ctermbg=black ctermfg=NONE cterm=NONE
-    hi DiffAdd ctermbg=NONE ctermfg=darkgreen cterm=NONE
-    hi DiffChange ctermbg=NONE ctermfg=darkyellow cterm=NONE
-    hi DiffDelete ctermbg=NONE ctermfg=darkred cterm=NONE
-    hi DiffText ctermbg=NONE ctermfg=red cterm=NONE
+    hi DiffAdd ctermbg=darkgray ctermfg=darkgreen cterm=NONE
+    hi DiffChange ctermbg=darkgray ctermfg=NONE cterm=NONE
+    hi DiffDelete ctermbg=darkgray ctermfg=darkred cterm=NONE
+    hi DiffText ctermbg=darkgray ctermfg=darkyellow cterm=NONE
     hi helpHyperTextJump ctermbg=bg ctermfg=darkmagenta cterm=NONE
 endif
 
@@ -159,6 +157,7 @@ hi! link TabLine StatusLineNC
 hi! link TabLineFill StatusLineNC
 hi! link TabLineSel StatusLine
 hi! link CursorColumn CursorLine
+hi! link SpellRare SpellLocal
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link htmlTag htmlTagName

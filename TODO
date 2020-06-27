@@ -1,8 +1,6 @@
-- Improve spell check colours
-- Improve diff colours
 - Create a proper Photon based terminal theme (but more colourful than regular Photon).
 - Add terminal colours to `contrib` branch (Mintty, Termux, St).
-- Brighten foreground colour?
+- Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
 
 Vim check_colors.vim compliance
     :e colors/photon.vim | so $VIMRUNTIME/colors/tools/check_colors.vim
