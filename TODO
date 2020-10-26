@@ -1,6 +1,11 @@
-- Create a proper Photon based terminal theme (but more colourful than regular Photon).
-- Add terminal colours to `contrib` branch (Mintty, Termux, St).
-- Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
+* Create a proper terminal themes (with correct colours).
+  - Add terminal colours to `contrib` branch (Mintty, Termux, St).
+  - Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
 
-Vim check_colors.vim compliance
+* Vim check_colors.vim compliance
     :e colors/photon.vim | so $VIMRUNTIME/colors/tools/check_colors.vim
+
+* GNU Emacs port
+  - Set background colour under some elements similarly to Firebelly.
+  - Use new diff and spell check colours.
+  - Add colours for Dired (e.g. blue directories).
