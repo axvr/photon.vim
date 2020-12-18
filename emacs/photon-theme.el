@@ -46,25 +46,29 @@
                  faces)))
 
 (defvar photon-theme-colors
-  '(:bg "#262626"
+  '(;; Background
+    :bg "#262626"
+
     ;; Darker background shades
     :bgd-1 "#1c1c1c"
-    :bgd-2 "#121212"
+    ;; :bgd-2 "#121212"
+
     ;; Lighter background shades
     :bgl-1 "#303030"
     :bgl-2 "#3a3a3a"
     :bgl-3 "#444444"
     :bgl-4 "#626262"
 
+    ;; Foreground
     :fg "#c6c6c6"
 
+    ;; Accents
     :purple "#af87d8"
     :orange "#d75f5f"
     :grey   "#767676"
-    :yellow "#af8700"
     :green  "#87af87"
-    :blue   "#5f87ff"
-    :red    "#af5f87"))
+    :red    "#af5f87"
+    :yellow "#d7af5f"))
 
 (deftheme photon
   "An elegant, dark colour scheme with minimal syntax highlighting.")
@@ -79,20 +83,10 @@
    ;; Bare essentials
 
    (default :foreground fg :background bg)
-   (border  :background bg) ; TODO check what this is
    (cursor  :background fg)
    (fringe  :background bg)
-   (header-line :background nil :inherit mode-line)
-   (highlight :background bgl-1)
-   (link    :foreground purple :underline t)
-   (link-visited :foreground "violet" :underline t :inherit link)
-   (minibuffer-prompt :weight bold :foreground grey)
    (region :background bgl-2 :distant-foreground nil)
    (secondary-selection :background bgl-2)
-   (shadow :foreground bgl-4)
-   (trailing-whitespace :foreground fg :background red)
-   ;;(widget-button)
-   ;;(widget-field)
 
    (error   :foreground red    :weight bold)
    (warning :foreground yellow :weight bold)
@@ -122,15 +116,9 @@
    (mode-line-highlight :box (:line-width 2 :color "grey40" :style released-button))
    (mode-line-inactive :foreground grey :background bgl-1 :inherit mode-line)
 
-   ;;; Isearch
-   (isearch :foreground bg :background orange)
-   (isearch-fail :foreground red)
-   (match :foreground fg :background blue)
-   (lazy-highlight :foreground bg :background purple)
-
-   ;;; Show paren
-   (show-paren-match :foreground orange :weight bold)
-   (show-paren-mismatch :foreground bg :background red :weight bold)
+   (tab-bar :inherit mode-line-inactive)
+   (tab-bar-tab :inherit mode-line)
+   (tab-bar-tab-inactive :inherit mode-line-inactive)
 
    ;;; Line numbers
    (line-number :foreground bgl-4)
@@ -139,17 +127,44 @@
    ;;; Hl-line
    (hl-line :background bgl-1)
 
+   (header-line :background nil :inherit mode-line)
+   (menu :inherit mode-line)
+   (highlight :background bgl-1)
+   (link    :foreground purple :underline t)
+   (link-visited :foreground "violet" :underline t :inherit link)
+   (minibuffer-prompt :weight bold :foreground grey)
+   (trailing-whitespace :foreground fg :background red)
+
+   ;;; Isearch
+   (isearch :foreground bg :background orange)
+   (isearch-fail :foreground red)
+   (match :foreground fg :background yellow)
+   (lazy-highlight :foreground bg :background purple)
+
+   ;;; Show paren
+   (show-paren-match :foreground orange :weight bold)
+   (show-paren-mismatch :foreground bg :background red :weight bold)
+
    ;;; Diff
-   (diff-added   :foreground green)
-   (diff-changed :foreground yellow)
-   (diff-removed :foreground red)
+   (diff-added   :foreground nil :background "#293235" :extend t)
+   (diff-changed :foreground nil :background "#32322c" :extend t)
+   (diff-removed :foreground nil :background "#3c2a2c" :extend t)
    (diff-header  :foreground grey :background bgl-1)
    (diff-file-header :foreground purple :inherit diff-header)
    (diff-hunk-header :foreground grey :inherit diff-header)
+   (diff-refine-added :foreground green)
+   (diff-refine-changed :foreground yellow)
+   (diff-refine-removed :foreground red)
+   (diff-indicator-added :foreground green)
+   (diff-indicator-changed :foreground yellow)
+   (diff-indicator-removed :foreground red)
 
    ;;; Flyspell
-   (flyspell-duplicate :underline (:style wave :color blue))
+   (flyspell-duplicate :underline (:style wave :color yellow))
    (flyspell-incorrect :underline (:style wave :color red))
+
+   ;;(widget-button)
+   ;;(widget-field)
 
    ;;; Other
    ;; TODO
@@ -160,7 +175,7 @@
    (next-error :inherit region)
    (query-replace :inherit isearch)
 
-   ;;; TODO: Org, company, magit?, flymake, ido (and/or ivy)
+   ;;; TODO: Org, company, magit?, flymake
 
    ;;; Org mode
    (org-document-title :foreground fg :weight bold)
@@ -174,9 +189,33 @@
    (outline-8 :inherit outline-7)
    (org-todo :foreground orange :weight bold)
 
+   ;;; Company
+   (company-tooltip :background bgl-2 :foreground fg)
+   (company-tooltip-selection :background bgl-1 :foreground purple)
+   (company-tooltip-common :background bgl-2 :foreground grey)
+   (company-tooltip-common-selection :background bgl-1 :foreground purple)
+   (company-scrollbar-bg :background bgl-1)
+   (company-scrollbar-fg :background orange)
+   (company-tooltip-mouse :background bgl-1 :foreground purple)
+   (company-tooltip-annotation :foreground grey)
+   (company-preview :background bgl-1 :foreground grey)
+   (company-preview-common :background bgl-1 :foreground grey)
+   (company-preview-search :background bgl-1 :foreground grey)
+
+   (selectrum-current-candidate :background bgl-1 :foreground purple)
+
    ))
 
 ;; TODO: terminal colours
+
+;; TODO: Photon improvements:
+;; - Sly buffer colours.
+;; - Directory colours.
+;; - Magit
+;; - Use new diff colours.
+
+;; TODO: more accent colours + different variants of them.
+;; TODO: replace or remove GPLv3 template logic.
 
 ;;;###autoload
 (and load-file-name
