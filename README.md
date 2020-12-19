@@ -1,7 +1,7 @@
 # Photon.vim
 
-An elegant dark Vim colour scheme with minimal syntax highlighting that cares
-about the little details.
+An elegant pair of Vim colour schemes with minimal syntax highlighting that
+care about the little details.
 
 ![Image of Photon](https://github.com/axvr/photon.vim/raw/images/photon1.png)
 
@@ -44,11 +44,15 @@ by [Raph Levien](https://levien.com/)._
 
 ## Usage
 
-Install this colour scheme using your preferred method, then place the
-following line in your Vim configuration.
+Install this colour scheme using your preferred method, then place one of the
+following lines in your Vim configuration.
 
 ```vim
+" Dark theme
 colorscheme photon
+
+" Light theme
+colorscheme antiphoton
 ```
 
 No other configuration should be required.

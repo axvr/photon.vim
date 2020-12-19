@@ -5,6 +5,11 @@
 * Vim check_colors.vim compliance
     :e colors/photon.vim | so $VIMRUNTIME/colors/tools/check_colors.vim
 
+* Light variant (Antiphoton)
+  - Add screenshots
+  - Update README content
+  - Fix 16-colour support
+
 * GNU Emacs port
   - Set background colour under some elements similarly to Firebelly.
   - Use new diff and spell check colours.
