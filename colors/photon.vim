@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2020-06-27
+" Last Change: 2020-12-23
 
 hi clear
 if exists("syntax_on")

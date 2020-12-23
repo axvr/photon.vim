@@ -4,8 +4,3 @@
 
 * Vim check_colors.vim compliance
     :e colors/photon.vim | so $VIMRUNTIME/colors/tools/check_colors.vim
-
-* GNU Emacs port
-  - Set background colour under some elements similarly to Firebelly.
-  - Use new diff and spell check colours.
-  - Add colours for Dired (e.g. blue directories).
