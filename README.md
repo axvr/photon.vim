@@ -4,22 +4,13 @@ An elegant pair of Vim colour schemes with minimal syntax highlighting that
 care about the little details.
 
 
-<table>
-<tr>
-<th>Photon (dark)</th>
-<th>Antiphoton (light)</th>
-</tr>
-<tr>
-<td>
-<img alt="Screenshot of Photon" title="Photon" width="500"
-     src="https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/photon5.png" />
-</td>
-<td>
-<img alt="Screenshot of Antiphoton" title="Antiphoton" width="500"
-     src="https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/antiphoton1.png"
-</td>
-</tr>
-</table>
+### Photon (dark theme)
+
+![](https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/photon5.png)
+
+### Antiphoton (light theme)
+
+![](https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/antiphoton1.png)
 
 _The font in the above screenshots is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
 
