@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, light colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2020-12-20
+" Last Change: 2020-12-23
 
 hi clear
 if exists("syntax_on")
@@ -74,7 +74,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
 
     set background=light
 
-    hi NonText ctermbg=bg ctermfg=white cterm=NONE
+    hi NonText ctermbg=bg ctermfg=darkgrey cterm=NONE
     hi Comment ctermbg=bg ctermfg=darkgray cterm=NONE
     hi Conceal ctermbg=bg ctermfg=darkgray cterm=NONE
     hi Constant ctermbg=bg ctermfg=darkmagenta cterm=NONE
@@ -89,25 +89,25 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ModeMsg ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi Todo ctermbg=NONE ctermfg=red cterm=bold
     hi Underlined ctermbg=NONE ctermfg=black cterm=underline
-    hi StatusLine ctermbg=white ctermfg=darkmagenta cterm=bold
-    hi StatusLineNC ctermbg=white ctermfg=darkgray cterm=NONE
-    hi TabLine ctermbg=white ctermfg=darkgray cterm=NONE
-    hi TabLineSel ctermbg=white ctermfg=darkmagenta cterm=bold
+    hi StatusLine ctermbg=grey ctermfg=darkmagenta cterm=bold
+    hi StatusLineNC ctermbg=grey ctermfg=darkgray cterm=NONE
+    hi TabLine ctermbg=darkgrey ctermfg=darkgray cterm=NONE
+    hi TabLineSel ctermbg=grey ctermfg=darkmagenta cterm=bold
     hi WildMenu ctermbg=red ctermfg=white cterm=NONE
-    hi VertSplit ctermbg=white ctermfg=white cterm=NONE
+    hi VertSplit ctermbg=grey ctermfg=grey cterm=NONE
     hi Title ctermbg=NONE ctermfg=black cterm=bold
     hi LineNr ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi CursorLineNr ctermbg=white ctermfg=darkmagenta cterm=NONE
+    hi CursorLineNr ctermbg=grey ctermfg=darkmagenta cterm=NONE
     hi Cursor ctermbg=darkmagenta ctermfg=black cterm=NONE
-    hi CursorLine ctermbg=white ctermfg=NONE cterm=NONE
+    hi CursorLine ctermbg=grey ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi Visual ctermbg=white ctermfg=NONE cterm=NONE
-    hi VisualNOS ctermbg=white ctermfg=NONE cterm=NONE
-    hi Pmenu ctermbg=white ctermfg=darkgray cterm=NONE
-    hi PmenuSbar ctermbg=white ctermfg=NONE cterm=NONE
-    hi PmenuSel ctermbg=white ctermfg=darkmagenta cterm=bold
+    hi Visual ctermbg=grey ctermfg=NONE cterm=NONE
+    hi VisualNOS ctermbg=darkgrey ctermfg=NONE cterm=NONE
+    hi Pmenu ctermbg=grey ctermfg=darkgray cterm=NONE
+    hi PmenuSbar ctermbg=grey ctermfg=NONE cterm=NONE
+    hi PmenuSel ctermbg=grey ctermfg=darkmagenta cterm=bold
     hi PmenuThumb ctermbg=red ctermfg=NONE cterm=NONE
-    hi Folded ctermbg=white ctermfg=darkgray cterm=NONE
+    hi Folded ctermbg=darkgrey ctermfg=darkgray cterm=NONE
     hi FoldColumn ctermbg=NONE ctermfg=darkyellow cterm=NONE
     hi SpecialKey ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi IncSearch ctermbg=red ctermfg=white cterm=NONE
@@ -117,11 +117,11 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi SpellBad ctermbg=NONE ctermfg=darkred cterm=underline
     hi SpellCap ctermbg=NONE ctermfg=darkgreen cterm=underline
     hi SpellLocal ctermbg=NONE ctermfg=darkyellow cterm=underline
-    hi QuickFixLine ctermbg=white ctermfg=NONE cterm=NONE
-    hi DiffAdd ctermbg=white ctermfg=darkgreen cterm=NONE
-    hi DiffChange ctermbg=white ctermfg=NONE cterm=NONE
-    hi DiffDelete ctermbg=white ctermfg=darkred cterm=NONE
-    hi DiffText ctermbg=white ctermfg=darkyellow cterm=NONE
+    hi QuickFixLine ctermbg=darkgrey ctermfg=NONE cterm=NONE
+    hi DiffAdd ctermbg=grey ctermfg=darkgreen cterm=NONE
+    hi DiffChange ctermbg=grey ctermfg=NONE cterm=NONE
+    hi DiffDelete ctermbg=grey ctermfg=darkred cterm=NONE
+    hi DiffText ctermbg=grey ctermfg=darkyellow cterm=NONE
     hi helpHyperTextJump ctermbg=bg ctermfg=darkmagenta cterm=NONE
 endif
 
