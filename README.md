@@ -3,43 +3,25 @@
 An elegant pair of Vim colour schemes with minimal syntax highlighting that
 care about the little details.
 
-![Image of Photon](https://github.com/axvr/photon.vim/raw/images/photon1.png)
 
 <table>
 <tr>
-<th>Editor</th>
-<th>Search</th>
+<th>Photon (dark)</th>
+<th>Antiphoton (light)</th>
 </tr>
 <tr>
 <td>
-<img alt="Image of editor colours" title="Editor" width="500"
-     src="https://github.com/axvr/photon.vim/raw/images/photon1.png" />
+<img alt="Screenshot of Photon" title="Photon" width="500"
+     src="https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/photon5.png" />
 </td>
 <td>
-<img alt="Image of search colours" title="Search" width="500"
-     src="https://github.com/axvr/photon.vim/raw/images/photon2.png"
-</td>
-</tr>
-<tr>
-<th>Completion menu</th>
-<th>Status line and tab line</th>
-</tr>
-<tr>
-<td>
-<img alt="Image of completion menu colours" title="Completion menu" width="500"
-     src="https://github.com/axvr/photon.vim/raw/images/photon3.png"
-</td>
-<td>
-<img alt="Image of status line and tab line colours" title="Status line and tab line" width="500"
-     src="https://github.com/axvr/photon.vim/raw/images/photon4.png"
+<img alt="Screenshot of Antiphoton" title="Antiphoton" width="500"
+     src="https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/antiphoton1.png"
 </td>
 </tr>
 </table>
 
-_The files shown in the above screenshots are from
-[txtdb](https://github.com/axvr/txtdb) and [irc.c](https://c9x.me/irc/).  The
-font is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created
-by [Raph Levien](https://levien.com/)._
+_The font in the above screenshots is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
 
 
 ## Usage
