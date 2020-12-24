@@ -30,31 +30,19 @@ colorscheme antiphoton
 
 No other configuration should be required.
 
-If you are having difficulties getting the colours to look like they do in the
-screenshots, please create an issue and I'll be happy to try and help.
-
 
 ## What makes Photon different?  (Photon vs. Paramount)
 
-Photon is a complete rewrite of [Paramount][], using [RNB][] as the generator.
-It aims to take Paramount's goal of "only \[putting\] emphasis on the
-paramount" to the next level by expanding the beauty of Paramount into the rest
-of Vim's interface.
+Photon is a rewrite of [Paramount][], using [RNB][] as the generator.  Its aim
+is to expand Paramount's goal — "only \[placing\] emphasis on the paramount" —
+to the rest of Vim's interface whilst fixing its inconsistencies.
 
-The main editor colours were taken from Paramount and are now used throughout
-the entirety of Vim's interface, such as the completion menu, help system,
-search matches, error messages and everything else.
-
-The status line colours were taken from [space-vim-dark][] and extended to the
-tab line.  The background colour, cursor line and colour column colours were
-taken from [Apprentice][].
-
-A new colour was introduced (the orange) and is used to place further emphasis
-on the most important *temporary* things, such as `TODO`s, matching
+A new colour was also introduced (the orange) which is used to place additional
+emphasis on the most important *temporary* things, such as `TODO`s, matching
 parenthesis, first matching search result, etc.
 
 The following images make for a good comparison of *just a few* of the big
-interface differences between Photon (left) and Paramount (right):
+interface differences between Photon \(left\) and Paramount \(right\):
 
 <table>
 <tr>
@@ -76,9 +64,8 @@ interface differences between Photon (left) and Paramount (right):
 
 ## Ports
 
-I have created a basic [GNU Emacs](https://www.gnu.org/software/emacs/) port
-which is far from finished, but I'm not working on it any more as I no longer
-use Emacs.  If you want it anyway you can get it from the
+There is also a basic [GNU Emacs](https://www.gnu.org/software/emacs/) port
+which is far from finished but if you want it anyway, you can get it from the
 [`contrib` branch](https://raw.githubusercontent.com/axvr/photon.vim/contrib/emacs/photon-theme.el).
 
 
