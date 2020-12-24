@@ -2,7 +2,7 @@
 " Author:      Alex Vear <av@axvr.io>
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, light colour scheme with minimal syntax highlighting
-" Licence:     MIT (2019)
+" Licence:     MIT (2020)
 " Last Change: 2020-12-24
 
 hi clear

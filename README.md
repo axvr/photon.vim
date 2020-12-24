@@ -72,7 +72,7 @@ which is far from finished but if you want it anyway, you can get it from the
 ## Attribution
 
 Based on the [paramount][] and [space-vim-dark][] colour schemes.  Made possible
-thanks to [Romain Lafourcade][]'s fantastic [RNB][] Vim colour scheme template.
+thanks to [Romain Lafourcade][]'s [RNB][] Vim colour scheme template.
 
 
 [space-vim-dark]: https://github.com/liuchengxu/space-vim-dark
