@@ -1,5 +1,4 @@
-* Create a proper terminal themes (with correct colours).
-  - Add terminal colours to `contrib` branch (Mintty, Termux, St).
+* :terminal colours
   - Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
 
 * Vim check_colors.vim compliance

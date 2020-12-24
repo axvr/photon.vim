@@ -203,29 +203,26 @@
     # or in TUI Vim when 'termguicolors' is enabled. If this list
     # is empty or if it doesn't contain exactly 16 items, the corresponding
     # Vim variable won't be set.
-    #
-    # This is modified version of the the "Tango" terminal colour scheme.
-    # It is just temporary until I create one based on Photon.
     terminal_ansi_colors = [
         # Dark
-        bg,           # black
-        ["#ac2c2c"],  # red
-        ["#4e9a06"],  # green
-        ["#c4a000"],  # yellow
-        ["#3465a4"],  # blue
-        ["#75507b"],  # magenta
-        ["#389aad"],  # cyan
-        ["#d3d7cf"],  # white
+        fg,           # black
+        red,          # red
+        green,        # green
+        ["#a2734c"],  # yellow
+        ["#12488b"],  # blue
+        ["#a347ba"],  # magenta
+        ["#2aa1b3"],  # cyan
+        bgl_4,        # white
 
         # Bright
-        ["#555753"],  # black
-        ["#ef2929"],  # red
-        ["#8ae234"],  # green
-        ["#fce94f"],  # yellow
-        ["#729fcf"],  # blue
-        ["#ad7fa8"],  # magenta
-        ["#34e2e2"],  # cyan
-        fg            # white
+        grey,         # black
+        orange,       # red
+        ["#33d17a"],  # green
+        yellow,       # yellow
+        ["#2a7bde"],  # blue
+        purple,       # magenta
+        ["#33c7de"],  # cyan
+        bg            # white
     ]
 
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.

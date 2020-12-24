@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, light colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2020-12-23
+" Last Change: 2020-12-24
 
 hi clear
 if exists("syntax_on")
@@ -166,22 +166,22 @@ hi! link htmlEndTag htmlTag
 hi! link gitcommitSummary Title
 
 let g:terminal_ansi_colors = [
-        \ '#ffffff',
-        \ '#ac2c2c',
-        \ '#4e9a06',
-        \ '#c4a000',
-        \ '#3465a4',
-        \ '#75507b',
-        \ '#389aad',
-        \ '#d3d7cf',
-        \ '#555753',
-        \ '#ef2929',
-        \ '#8ae234',
-        \ '#fce94f',
-        \ '#729fcf',
-        \ '#ad7fa8',
-        \ '#34e2e2',
         \ '#121212',
+        \ '#af0000',
+        \ '#008700',
+        \ '#a2734c',
+        \ '#12488b',
+        \ '#a347ba',
+        \ '#2aa1b3',
+        \ '#949494',
+        \ '#6c6c6c',
+        \ '#d75f5f',
+        \ '#33d17a',
+        \ '#d75f00',
+        \ '#2a7bde',
+        \ '#af5fd7',
+        \ '#33c7de',
+        \ '#ffffff',
         \ ]
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
