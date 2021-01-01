@@ -66,11 +66,11 @@
    `(font-lock-regexp-grouping-construct ((,class :inherit font-lock-regexp-grouping-backslash)))
 
    `(font-lock-warning-face ((,class :inherit error)))
-   `(trailing-whitespace ((,class :foreground fg :background red)))
+   `(trailing-whitespace ((,class :foreground ,fg :background ,red)))
 
-   `(highlight ((,class :background bgl-1)))
+   `(highlight ((,class :background ,bgl-1)))
 
-   `(link         ((,class :foreground purple :underline t)))
+   `(link         ((,class :foreground ,purple :underline t)))
    `(link-visited ((,class :foreground "violet" :underline t :inherit link)))
 
 
@@ -80,7 +80,7 @@
    `(mode-line ((,class :foreground ,purple :background ,bgl-2 :box nil)))
    `(mode-line-buffer-id ((,class :weight bold)))
    `(mode-line-emphasis  ((,class :weight bold)))
-   `(mode-line-hightlight ((,class :box (:line-width 2 :color "grey40" :style released-button))))
+   `(mode-line-highlight ((,class :inherit highlight )))
    `(mode-line-inactive ((,class :foreground ,grey :background ,bgl-1 :inherit mode-line)))
 
    `(line-number ((,class :foreground ,bgl-4)))
