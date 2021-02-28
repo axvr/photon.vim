@@ -64,10 +64,13 @@ interface differences between Photon \(left\) and Paramount \(right\):
 
 ## Ports
 
-There is also a basic [GNU Emacs](https://www.gnu.org/software/emacs/) port
-which is far from finished but if you want it anyway, you can get it from the
-[`contrib` branch](https://raw.githubusercontent.com/axvr/photon.vim/contrib/emacs/photon-theme.el).
+Be sure to check out the [`contrib` branch](https://github.com/axvr/photon.vim/tree/contrib)
+for ports of the Photon and Antiphoton themes to other tools.
 
+Current ports:
+
+- [GNU Emacs](https://github.com/axvr/photon.vim/tree/contrib/emacs) \(_incomplete_\)
+- [Alacritty](https://github.com/axvr/photon.vim/tree/contrib/alacritty) \(contributed by [@prlscnc](https://github.com/prlscnc)\)
 
 ## Attribution
 
