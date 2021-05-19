@@ -6,11 +6,11 @@ care about the little details.
 
 ### Photon (dark theme)
 
-![](https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/photon5.png)
+![](https://raw.githubusercontent.com/axvr/photon.vim/36ec1b4c8b13c3f714b0dc233ec2e0fb280dede2/photon6.png)
 
 ### Antiphoton (light theme)
 
-![](https://raw.githubusercontent.com/axvr/photon.vim/be279d4bd29d78f61860f97be6561b65c0d10067/antiphoton1.png)
+![](https://raw.githubusercontent.com/axvr/photon.vim/36ec1b4c8b13c3f714b0dc233ec2e0fb280dede2/antiphoton2.png)
 
 _The font in the above screenshots is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
 
