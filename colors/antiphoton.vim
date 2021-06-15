@@ -1,9 +1,9 @@
 " Name:        antiphoton.vim
-" Author:      Alex Vear <av@axvr.io>
+" Author:      Alex Vear <alex@vear.uk>
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, light colour scheme with minimal syntax highlighting
 " Licence:     MIT (2020)
-" Last Change: 2020-12-24
+" Last Change: 2021-06-15
 
 hi clear
 if exists("syntax_on")
