@@ -1,9 +1,1 @@
-* :terminal colours
-  - Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
-
-* Vim check_colors.vim compliance
-    :e colors/photon.vim | so $VIMRUNTIME/colors/tools/check_colors.vim
-
-* GNU Emacs port
-  - Rewrite Emacs port.
-  - Remove contrib branch?  (Create photon.el repo?)
+- Add Neovim true colour :terminal support <https://github.com/romainl/vim-rnb/issues/6>
