@@ -3,12 +3,6 @@
     # Author:        Romain Lafourcade (https://github.com/romainl)
     # Canonical URL: https://github.com/romainl/vim-rnb
 
-    # Information:
-    #
-    # Make sure the name of your colorscheme is unique and attractive.
-    # The description should fit in a single line with no linefeed.
-    # 'background' can be "light" or "dark".
-
     information = {
         author:      "Alex Vear",
         email:       "alex@vear.uk",
@@ -31,20 +25,25 @@
     #                 "white", or "NONE"
     # ]
     #
-    # If your colors are defined correctly, the resulting colorscheme is guaranteed
-    # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
+    # If your colors are defined correctly, the resulting colorscheme is
+    # guaranteed to work in GVim (Windows/Linux), MacVim (MacOS), and any
+    # properly set up terminal emulator.
 
     # Background
     bg = ["#ffffff", 231, "white"]
 
-    # Lighter background shades
-    bgl_1 = ["#eeeeee", 255, "grey"]
-    bgl_2 = ["#e4e4e4", 254, "grey"]
-    bgl_3 = ["#dadada", 253, "darkgrey"]
-    bgl_4 = ["#949494", 246, "darkgray"]
+    # Darker background shades
+    bgd_1 = ["#eeeeee", 255, "white"]
+    bgd_2 = ["#e4e4e4", 254, "white"]
+    bgd_3 = ["#dadada", 253, "grey"]
+    bgd_4 = ["#949494", 246, "gray"]
 
     # Foreground
     fg = ["#121212", 233, "black"]
+
+    # Lighter background shades
+    fgl_1 = ["#303030", 236, "black"]
+    fgl_2 = ["#4e4e4e", 239, "darkgrey"]
 
     # Accents
     purple = ["#af5fd7", 134, "darkmagenta"]
@@ -65,11 +64,11 @@
     #                     "standout", "NONE" or "undercurl"
     #   ]
     #
-    # The sample above tells Vim to render normal text in dark gray against a white
-    # background, without any other styling.
+    # The sample above tells Vim to render normal text in dark gray against
+    # a white background, without any other styling.
     #
-    # Or you can link an highlight group to another. Here, "Title" will inherit its style from
-    # "Normal":
+    # Or you can link an highlight group to another. Here, "Title" will inherit
+    # its style from "Normal":
     #
     #   [ "Title", "Normal" ]
     #
@@ -83,13 +82,13 @@
     #     red             color used for the undercurl
     #   ]
     #
-    # The sample above tells Vim to render badly spelled words in red against the current
-    # background, with a red undercurl.
+    # The sample above tells Vim to render badly spelled words in red against
+    # the current background, with a red undercurl.
 
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
-        [ "NonText", "bg", bgl_3, "NONE" ],
-        [ "Comment", "bg", bgl_4, "NONE" ],
+        [ "NonText", "bg", bgd_3, "NONE" ],
+        [ "Comment", "bg", bgd_4, "NONE" ],
         [ "Conceal", "bg", grey, "NONE" ],
 
         [ "Constant", "bg", purple, "NONE" ],
@@ -142,35 +141,35 @@
         [ "Todo", "NONE", orange, "bold" ],
         [ "Underlined", "NONE", fg, "underline" ],
 
-        [ "StatusLine", bgl_2, purple, "bold" ],
-        [ "StatusLineNC", bgl_1, grey, "NONE" ],
+        [ "StatusLine", bgd_2, purple, "bold" ],
+        [ "StatusLineNC", bgd_1, grey, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-        [ "TabLine", bgl_3, grey, "NONE"],
+        [ "TabLine", bgd_3, grey, "NONE"],
         [ "TabLineFill", "TabLine" ],
-        [ "TabLineSel", bgl_1, purple, "bold" ],
+        [ "TabLineSel", bgd_1, purple, "bold" ],
         [ "WildMenu", orange, bg, "NONE" ],
-        [ "VertSplit", bgl_1, bgl_1, "NONE" ],
+        [ "VertSplit", bgd_1, bgd_1, "NONE" ],
 
         [ "Title", "NONE", fg, "bold" ],
 
-        [ "LineNr", "NONE", bgl_4, "NONE" ],
-        [ "CursorLineNr", bgl_1, purple, "NONE" ],
+        [ "LineNr", "NONE", bgd_4, "NONE" ],
+        [ "CursorLineNr", bgd_1, purple, "NONE" ],
         [ "Cursor", purple, fg, "NONE" ],
-        [ "CursorLine", bgl_1, "NONE", "NONE" ],
+        [ "CursorLine", bgd_1, "NONE", "NONE" ],
         [ "CursorColumn", "CursorLine" ],
         [ "ColorColumn", "CursorColumn" ],
         [ "SignColumn", "NONE", grey, "NONE" ],
 
-        [ "Visual", bgl_2, "NONE", "NONE" ],
-        [ "VisualNOS", bgl_3, "NONE", "NONE" ],
+        [ "Visual", bgd_2, "NONE", "NONE" ],
+        [ "VisualNOS", bgd_3, "NONE", "NONE" ],
 
-        [ "Pmenu", bgl_1, grey, "NONE" ],
-        [ "PmenuSbar", bgl_2, "NONE", "NONE" ],
-        [ "PmenuSel", bgl_2, purple, "bold" ],
+        [ "Pmenu", bgd_1, grey, "NONE" ],
+        [ "PmenuSbar", bgd_2, "NONE", "NONE" ],
+        [ "PmenuSel", bgd_2, purple, "bold" ],
         [ "PmenuThumb", orange, "NONE", "NONE" ],
 
-        [ "Folded", bgl_3, grey, "NONE" ],
+        [ "Folded", bgd_3, grey, "NONE" ],
         [ "FoldColumn", "NONE", yellow, "NONE" ],
 
         [ "SpecialKey", "NONE", grey, "NONE" ],
@@ -184,12 +183,12 @@
         [ "SpellLocal", "NONE", yellow, "underline" ],
         [ "SpellRare", "SpellLocal" ],
 
-        [ "QuickFixLine", bgl_3, "NONE", "NONE" ],
+        [ "QuickFixLine", bgd_3, "NONE", "NONE" ],
 
-        [ "DiffAdd", bgl_1, green, "NONE" ],
-        [ "DiffChange", bgl_1, "NONE", "NONE" ],
-        [ "DiffDelete", bgl_1, red, "NONE" ],
-        [ "DiffText", bgl_1, yellow, "NONE" ],
+        [ "DiffAdd", bgd_1, green, "NONE" ],
+        [ "DiffChange", bgd_1, "NONE", "NONE" ],
+        [ "DiffDelete", bgd_1, red, "NONE" ],
+        [ "DiffText", bgd_1, yellow, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
 
@@ -199,30 +198,29 @@
         [ "gitcommitSummary", "Title" ]
     ]
 
-    # Define the color palette used by :terminal when in GUI Vim
-    # or in TUI Vim when 'termguicolors' is enabled. If this list
-    # is empty or if it doesn't contain exactly 16 items, the corresponding
-    # Vim variable won't be set.
+    # Define the color palette used by :terminal when in GUI Vim or in TUI Vim
+    # when 'termguicolors' is enabled. If this list is empty or if it doesn't
+    # contain exactly 16 items, the corresponding Vim variable won't be set.
     terminal_ansi_colors = [
         # Dark
-        fg,           # black
+        fgl_1,        # black
         red,          # red
         green,        # green
         ["#a2734c"],  # yellow
         ["#12488b"],  # blue
         ["#a347ba"],  # magenta
         ["#2aa1b3"],  # cyan
-        bgl_4,        # white
+        bgd_4,        # white
 
         # Bright
-        grey,         # black
+        fgl_2,        # black
         orange,       # red
         ["#33d17a"],  # green
         yellow,       # yellow
         ["#2a7bde"],  # blue
         purple,       # magenta
         ["#33c7de"],  # cyan
-        bg            # white
+        bgd_2         # white
     ]
 
     # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
@@ -280,11 +278,17 @@ hi! link <%= link[0] %> <%= link[1] %>
 <% end -%>
 <% if terminal_ansi_colors.length == 16 -%>
 <%= '' %>
-let g:terminal_ansi_colors = [
-<% for color in terminal_ansi_colors -%>
-        \ '<%= color[0] %>',
+if has('nvim')
+<% terminal_ansi_colors.each_with_index do |color,index| -%>
+    let g:terminal_color_<%= index %> = '<%= color[0] %>'
 <% end -%>
-        \ ]
+else
+    let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+            \ '<%= color[0] %>',
+<% end -%>
+            \ ]
+endif
 <% end -%>
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)

@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/photon.vim
 " Description: An elegant, dark colour scheme with minimal syntax highlighting
 " Licence:     MIT (2019)
-" Last Change: 2021-06-15
+" Last Change: 2021-08-16
 
 hi clear
 if exists("syntax_on")
@@ -164,23 +164,42 @@ hi! link htmlTag htmlTagName
 hi! link htmlEndTag htmlTag
 hi! link gitcommitSummary Title
 
-let g:terminal_ansi_colors = [
-        \ '#262626',
-        \ '#ac2c2c',
-        \ '#4e9a06',
-        \ '#c4a000',
-        \ '#3465a4',
-        \ '#75507b',
-        \ '#389aad',
-        \ '#626262',
-        \ '#767676',
-        \ '#af5f87',
-        \ '#87af87',
-        \ '#d7af5f',
-        \ '#729fcf',
-        \ '#af87d7',
-        \ '#34e2e2',
-        \ '#c6c6c6',
-        \ ]
+if has('nvim')
+    let g:terminal_color_0 = '#3a3a3a'
+    let g:terminal_color_1 = '#ac2c2c'
+    let g:terminal_color_2 = '#4e9a06'
+    let g:terminal_color_3 = '#c4a000'
+    let g:terminal_color_4 = '#1880bc'
+    let g:terminal_color_5 = '#75507b'
+    let g:terminal_color_6 = '#389aad'
+    let g:terminal_color_7 = '#9e9e9e'
+    let g:terminal_color_8 = '#444444'
+    let g:terminal_color_9 = '#af5f87'
+    let g:terminal_color_10 = '#87af87'
+    let g:terminal_color_11 = '#d7af5f'
+    let g:terminal_color_12 = '#369dd8'
+    let g:terminal_color_13 = '#af87d7'
+    let g:terminal_color_14 = '#34e2e2'
+    let g:terminal_color_15 = '#b2b2b2'
+else
+    let g:terminal_ansi_colors = [
+            \ '#3a3a3a',
+            \ '#ac2c2c',
+            \ '#4e9a06',
+            \ '#c4a000',
+            \ '#1880bc',
+            \ '#75507b',
+            \ '#389aad',
+            \ '#9e9e9e',
+            \ '#444444',
+            \ '#af5f87',
+            \ '#87af87',
+            \ '#d7af5f',
+            \ '#369dd8',
+            \ '#af87d7',
+            \ '#34e2e2',
+            \ '#b2b2b2',
+            \ ]
+endif
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
